@@ -15,6 +15,8 @@
 		5E4148E92053754B001B1892 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E4148E72053754B001B1892 /* LaunchScreen.storyboard */; };
 		5E4148F42053754C001B1892 /* LearningBrailleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4148F32053754C001B1892 /* LearningBrailleTests.swift */; };
 		5E4148FF2053754C001B1892 /* LearningBrailleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4148FE2053754C001B1892 /* LearningBrailleUITests.swift */; };
+		5E41490D205375F8001B1892 /* BrailleConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E41490C205375F8001B1892 /* BrailleConverter.swift */; };
+		5E41490F20549A49001B1892 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E41490E20549A49001B1892 /* Groups.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		5E4148FA2053754C001B1892 /* LearningBrailleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearningBrailleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E4148FE2053754C001B1892 /* LearningBrailleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningBrailleUITests.swift; sourceTree = "<group>"; };
 		5E4149002053754C001B1892 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E41490C205375F8001B1892 /* BrailleConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrailleConverter.swift; sourceTree = "<group>"; };
+		5E41490E20549A49001B1892 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				5E4148E72053754B001B1892 /* LaunchScreen.storyboard */,
 				5E4148EA2053754B001B1892 /* Info.plist */,
 				5E4148E22053754B001B1892 /* LearningBraille.xcdatamodeld */,
+				5E41490C205375F8001B1892 /* BrailleConverter.swift */,
+				5E41490E20549A49001B1892 /* Groups.swift */,
 			);
 			path = LearningBraille;
 			sourceTree = "<group>";
@@ -262,8 +268,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E41490D205375F8001B1892 /* BrailleConverter.swift in Sources */,
 				5E4148DE2053754B001B1892 /* ViewController.swift in Sources */,
 				5E4148DC2053754B001B1892 /* AppDelegate.swift in Sources */,
+				5E41490F20549A49001B1892 /* Groups.swift in Sources */,
 				5E4148E42053754B001B1892 /* LearningBraille.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

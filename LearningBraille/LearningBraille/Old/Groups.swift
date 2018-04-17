@@ -21,6 +21,11 @@ struct Group {
     [false, true, true, false],     //
     [false, true,true, true]]       //
     
+    private let brailleGroup = [
+    (true, false, false, false, false, false)
+    
+    ]
+    
     private var typeG =
     [[false, false], [true, false], [true, true], [false, true]]
     

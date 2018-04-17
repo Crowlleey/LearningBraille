@@ -5,15 +5,10 @@
 //  Created by George Gomes on 09/03/18.
 //  Copyright © 2018 George Gomes. All rights reserved.
 //
-enum WordType {
-    case fullLowerCase
-    case fullUperCase
-    case mixCase
-    case numeral
-    case simple
-}
+
 
 import Foundation
+
 
 class BrailleConverter{
     typealias braille = [Bool]
@@ -34,19 +29,23 @@ class BrailleConverter{
            
             switch type{
                 
-            case .fullLowerCase:
+            case .fullLower:
                 translatedSentence.append(translateOnlyWords(word))
                 break
-            case .fullUperCase:
-                translatedSentence.append([gp.upper])
-                translatedSentence.append([gp.upper])
+            case .fullUper:
+                if(word.count == 1){
+                    translatedSentence.append([gp.upper])
+                }else{
+                    translatedSentence.append([gp.upper])
+                    translatedSentence.append([gp.upper])
+                }
                 translatedSentence.append(translateOnlyWords(word.lowercased()))
                 break
-            case .mixCase:
+            case .letterMix:
                 break
             case .numeral:
                 break
-            case .simple:
+            case .numeralMixLetter:
                 break
             }
             translatedSentence.append([gp.space])
@@ -63,13 +62,14 @@ class BrailleConverter{
             let st = String(letter)
             if(st.lowercased() == st){low = true}
             if(st.uppercased() == st){upper = true}
+            
         }
         
         var type: WordType!
         
-        if(low == true && upper == false){type = WordType.fullLowerCase
-        }else if(low == false && upper == true){type = WordType.fullUperCase}
-        else if (low == true && upper == true){type = WordType.mixCase}
+        if(low == true && upper == false){type = WordType.fullLower
+        }else if(low == false && upper == true){type = WordType.fullUper}
+        else if (low == true && upper == true){type = WordType.letterMix}
         
         return type
     }

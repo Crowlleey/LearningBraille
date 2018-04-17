@@ -13,10 +13,12 @@
 		5E4148E42053754B001B1892 /* LearningBraille.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5E4148E22053754B001B1892 /* LearningBraille.xcdatamodeld */; };
 		5E4148E62053754B001B1892 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E4148E52053754B001B1892 /* Assets.xcassets */; };
 		5E4148E92053754B001B1892 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E4148E72053754B001B1892 /* LaunchScreen.storyboard */; };
-		5E4148F42053754C001B1892 /* LearningBrailleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4148F32053754C001B1892 /* LearningBrailleTests.swift */; };
-		5E4148FF2053754C001B1892 /* LearningBrailleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4148FE2053754C001B1892 /* LearningBrailleUITests.swift */; };
 		5E41490D205375F8001B1892 /* BrailleConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E41490C205375F8001B1892 /* BrailleConverter.swift */; };
 		5E41490F20549A49001B1892 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E41490E20549A49001B1892 /* Groups.swift */; };
+		5EA1DCC9208569F300A31BE3 /* Simbles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA1DCC8208569F300A31BE3 /* Simbles.swift */; };
+		5EDFF62620604AF8002FF36A /* CustomString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDFF62520604AF8002FF36A /* CustomString.swift */; };
+		5EDFF62A20604FEC002FF36A /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDFF62920604FEC002FF36A /* Protocols.swift */; };
+		5EDFF62C2060511E002FF36A /* StringBraille.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDFF62B2060511E002FF36A /* StringBraille.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,13 +48,13 @@
 		5E4148E82053754B001B1892 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E4148EA2053754B001B1892 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E4148EF2053754C001B1892 /* LearningBrailleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearningBrailleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E4148F32053754C001B1892 /* LearningBrailleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningBrailleTests.swift; sourceTree = "<group>"; };
-		5E4148F52053754C001B1892 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E4148FA2053754C001B1892 /* LearningBrailleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearningBrailleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E4148FE2053754C001B1892 /* LearningBrailleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningBrailleUITests.swift; sourceTree = "<group>"; };
-		5E4149002053754C001B1892 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E41490C205375F8001B1892 /* BrailleConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrailleConverter.swift; sourceTree = "<group>"; };
 		5E41490E20549A49001B1892 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
+		5EA1DCC8208569F300A31BE3 /* Simbles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simbles.swift; sourceTree = "<group>"; };
+		5EDFF62520604AF8002FF36A /* CustomString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomString.swift; sourceTree = "<group>"; };
+		5EDFF62920604FEC002FF36A /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		5EDFF62B2060511E002FF36A /* StringBraille.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringBraille.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				5E4148DA2053754B001B1892 /* LearningBraille */,
-				5E4148F22053754C001B1892 /* LearningBrailleTests */,
-				5E4148FD2053754C001B1892 /* LearningBrailleUITests */,
 				5E4148D92053754B001B1892 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,35 +103,77 @@
 		5E4148DA2053754B001B1892 /* LearningBraille */ = {
 			isa = PBXGroup;
 			children = (
-				5E4148DB2053754B001B1892 /* AppDelegate.swift */,
-				5E4148DD2053754B001B1892 /* ViewController.swift */,
-				5E4148DF2053754B001B1892 /* Main.storyboard */,
-				5E4148E52053754B001B1892 /* Assets.xcassets */,
-				5E4148E72053754B001B1892 /* LaunchScreen.storyboard */,
+				5EDC50BE2078300D007AE8AB /* Com */,
+				5EDC50BB20782FE4007AE8AB /* Model */,
+				5EDC50BF2078302F007AE8AB /* Data */,
+				5EDC50BC20782FEB007AE8AB /* View */,
+				5EDC50BD20782FF1007AE8AB /* Controller */,
 				5E4148EA2053754B001B1892 /* Info.plist */,
-				5E4148E22053754B001B1892 /* LearningBraille.xcdatamodeld */,
-				5E41490C205375F8001B1892 /* BrailleConverter.swift */,
-				5E41490E20549A49001B1892 /* Groups.swift */,
+				5EDFF62820604FB8002FF36A /* Old */,
 			);
 			path = LearningBraille;
 			sourceTree = "<group>";
 		};
-		5E4148F22053754C001B1892 /* LearningBrailleTests */ = {
+		5EDC50BB20782FE4007AE8AB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5E4148F32053754C001B1892 /* LearningBrailleTests.swift */,
-				5E4148F52053754C001B1892 /* Info.plist */,
+				5EDC50C02078303E007AE8AB /* Text */,
 			);
-			path = LearningBrailleTests;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		5E4148FD2053754C001B1892 /* LearningBrailleUITests */ = {
+		5EDC50BC20782FEB007AE8AB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5E4148FE2053754C001B1892 /* LearningBrailleUITests.swift */,
-				5E4149002053754C001B1892 /* Info.plist */,
+				5E4148DF2053754B001B1892 /* Main.storyboard */,
+				5E4148E72053754B001B1892 /* LaunchScreen.storyboard */,
 			);
-			path = LearningBrailleUITests;
+			path = View;
+			sourceTree = "<group>";
+		};
+		5EDC50BD20782FF1007AE8AB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5E4148DD2053754B001B1892 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5EDC50BE2078300D007AE8AB /* Com */ = {
+			isa = PBXGroup;
+			children = (
+				5E4148E52053754B001B1892 /* Assets.xcassets */,
+				5E4148DB2053754B001B1892 /* AppDelegate.swift */,
+			);
+			path = Com;
+			sourceTree = "<group>";
+		};
+		5EDC50BF2078302F007AE8AB /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5E4148E22053754B001B1892 /* LearningBraille.xcdatamodeld */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5EDC50C02078303E007AE8AB /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				5EDFF62B2060511E002FF36A /* StringBraille.swift */,
+				5EDFF62520604AF8002FF36A /* CustomString.swift */,
+				5EDFF62920604FEC002FF36A /* Protocols.swift */,
+				5EA1DCC8208569F300A31BE3 /* Simbles.swift */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		5EDFF62820604FB8002FF36A /* Old */ = {
+			isa = PBXGroup;
+			children = (
+				5E41490C205375F8001B1892 /* BrailleConverter.swift */,
+				5E41490E20549A49001B1892 /* Groups.swift */,
+			);
+			path = Old;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,9 +311,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E41490D205375F8001B1892 /* BrailleConverter.swift in Sources */,
+				5EDFF62620604AF8002FF36A /* CustomString.swift in Sources */,
+				5EDFF62A20604FEC002FF36A /* Protocols.swift in Sources */,
 				5E4148DE2053754B001B1892 /* ViewController.swift in Sources */,
+				5EA1DCC9208569F300A31BE3 /* Simbles.swift in Sources */,
 				5E4148DC2053754B001B1892 /* AppDelegate.swift in Sources */,
 				5E41490F20549A49001B1892 /* Groups.swift in Sources */,
+				5EDFF62C2060511E002FF36A /* StringBraille.swift in Sources */,
 				5E4148E42053754B001B1892 /* LearningBraille.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,7 +326,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E4148F42053754C001B1892 /* LearningBrailleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +333,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E4148FF2053754C001B1892 /* LearningBrailleUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

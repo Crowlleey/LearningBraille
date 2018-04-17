@@ -17,14 +17,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        var o = BrailleConverter()
-        var b = o.translateThis("CA BA")
+//        var o = BrailleConverter()
+//        var b = o.translateThis("a b c  A B C ABC")
+//
+//        for a in b{
+//            for c in a{
+//                print(c)
+//            }
+//        }
         
-        for a in b{
-            for c in a{
-                print(c)
-            }
-        }
+        let stringLetter : String = "Ab"
+        let stringBrile = stringLetter.convertToBraille()
+
+        
+        print(stringBrile)
+        
         
         return true
     }

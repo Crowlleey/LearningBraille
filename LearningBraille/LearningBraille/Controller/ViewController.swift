@@ -10,9 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var stBraille: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.stBraille = "Hellob asuhd AOOOOO ASIS 9"
+        
+        stBraille.convertToBraille()   
     }
 
     override func didReceiveMemoryWarning() {

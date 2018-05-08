@@ -12,14 +12,23 @@ typealias LetterBraille = (Bool,Bool,Bool,Bool,Bool,Bool)
 
 struct StringBraille{
 
-     var a : String!
+    var a : String!
     
     var letters: [LetterBraille]!
     
     init(a: String) {
         self.a = a
     }
+    
+//    init(_ letters: [LetterBraille]) {
+//
+//    }
 
+    init(_ dict: [Bool]){
+        var o: LetterBraille = LetterBraille(dict[0], dict[1], dict[2], dict[3], dict[4], dict[5] )
+        self.letters = [o]
+    }
+    
 }
 
 

@@ -17,7 +17,13 @@ class ViewController: UIViewController {
         
         self.stBraille = "Hellob asuhd AOOOOO ASIS 9"
         
-        stBraille.convertToBraille()   
+        stBraille.convertToBraille()
+        
+        
+        var i = ParseJSON()
+        print("ULALA")
+        i.parseJsonClass()
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -16,6 +16,9 @@
 		5E41490D205375F8001B1892 /* BrailleConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E41490C205375F8001B1892 /* BrailleConverter.swift */; };
 		5E41490F20549A49001B1892 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E41490E20549A49001B1892 /* Groups.swift */; };
 		5EA1DCC9208569F300A31BE3 /* Simbles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA1DCC8208569F300A31BE3 /* Simbles.swift */; };
+		5EA1DCCD208696D500A31BE3 /* Letters.json in Resources */ = {isa = PBXBuildFile; fileRef = 5EA1DCCC208696D500A31BE3 /* Letters.json */; };
+		5EA1DCCF2086972000A31BE3 /* ParseJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA1DCCE2086972000A31BE3 /* ParseJSON.swift */; };
+		5EA1DCD42086C4D600A31BE3 /* Names.json in Resources */ = {isa = PBXBuildFile; fileRef = 5EA1DCD32086C4D600A31BE3 /* Names.json */; };
 		5EDFF62620604AF8002FF36A /* CustomString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDFF62520604AF8002FF36A /* CustomString.swift */; };
 		5EDFF62A20604FEC002FF36A /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDFF62920604FEC002FF36A /* Protocols.swift */; };
 		5EDFF62C2060511E002FF36A /* StringBraille.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDFF62B2060511E002FF36A /* StringBraille.swift */; };
@@ -52,6 +55,9 @@
 		5E41490C205375F8001B1892 /* BrailleConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrailleConverter.swift; sourceTree = "<group>"; };
 		5E41490E20549A49001B1892 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
 		5EA1DCC8208569F300A31BE3 /* Simbles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simbles.swift; sourceTree = "<group>"; };
+		5EA1DCCC208696D500A31BE3 /* Letters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Letters.json; sourceTree = "<group>"; };
+		5EA1DCCE2086972000A31BE3 /* ParseJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseJSON.swift; sourceTree = "<group>"; };
+		5EA1DCD32086C4D600A31BE3 /* Names.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Names.json; sourceTree = "<group>"; };
 		5EDFF62520604AF8002FF36A /* CustomString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomString.swift; sourceTree = "<group>"; };
 		5EDFF62920604FEC002FF36A /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		5EDFF62B2060511E002FF36A /* StringBraille.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringBraille.swift; sourceTree = "<group>"; };
@@ -114,9 +120,20 @@
 			path = LearningBraille;
 			sourceTree = "<group>";
 		};
+		5EA1DCD02086972B00A31BE3 /* LettersJson */ = {
+			isa = PBXGroup;
+			children = (
+				5EA1DCD32086C4D600A31BE3 /* Names.json */,
+				5EA1DCCC208696D500A31BE3 /* Letters.json */,
+				5EA1DCCE2086972000A31BE3 /* ParseJSON.swift */,
+			);
+			path = LettersJson;
+			sourceTree = "<group>";
+		};
 		5EDC50BB20782FE4007AE8AB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5EA1DCD02086972B00A31BE3 /* LettersJson */,
 				5EDC50C02078303E007AE8AB /* Text */,
 			);
 			path = Model;
@@ -286,6 +303,8 @@
 				5E4148E92053754B001B1892 /* LaunchScreen.storyboard in Resources */,
 				5E4148E62053754B001B1892 /* Assets.xcassets in Resources */,
 				5E4148E12053754B001B1892 /* Main.storyboard in Resources */,
+				5EA1DCCD208696D500A31BE3 /* Letters.json in Resources */,
+				5EA1DCD42086C4D600A31BE3 /* Names.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +338,7 @@
 				5E41490F20549A49001B1892 /* Groups.swift in Sources */,
 				5EDFF62C2060511E002FF36A /* StringBraille.swift in Sources */,
 				5E4148E42053754B001B1892 /* LearningBraille.xcdatamodeld in Sources */,
+				5EA1DCCF2086972000A31BE3 /* ParseJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

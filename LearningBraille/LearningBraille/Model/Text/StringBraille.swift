@@ -8,26 +8,26 @@
 
 import Foundation
 
-typealias LetterBraille = (Bool,Bool,Bool,Bool,Bool,Bool)
+typealias LetterBraille = [Bool]
 
 struct StringBraille{
 
     var a : String!
     
-    var letters: [LetterBraille]!
+    var words: [LetterBraille]!
     
     init(a: String) {
         self.a = a
     }
     
-//    init(_ letters: [LetterBraille]) {
-//
-//    }
-
-    init(_ dict: [Bool]){
-        var o: LetterBraille = LetterBraille(dict[0], dict[1], dict[2], dict[3], dict[4], dict[5] )
-        self.letters = [o]
+    init(_ words: [LetterBraille]) {
+        self.words = words
     }
+    
+//    init( dict: [Bool]){
+//        var o: LetterBraille = LetterBraille(dict[0], dict[1], dict[2], dict[3], dict[4], dict[5] )
+//        self.letters = [o]
+//    }
     
 }
 

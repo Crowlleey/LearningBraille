@@ -20,6 +20,10 @@ struct StringBraille{
         self.a = a
     }
     
+    init() {
+        self.words = [LetterBraille]()
+    }
+    
     init(_ words: [LetterBraille]) {
         self.words = words
     }

@@ -25,12 +25,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //                print(c)
 //            }
 //        }
-        
-        let stringLetter : String = "Ab"
-        let stringBrile = stringLetter.convertToBraille()
-
-        
-        print(stringBrile)
+//        
+//        let stringLetter : String = "Ab"
+//        let stringBrile = stringLetter.convertToBraille()
+//
+//        
+//        print(stringBrile)
         
         
         return true

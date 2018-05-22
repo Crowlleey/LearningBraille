@@ -11,17 +11,22 @@ import Foundation
 extension String{
  
     func convertToBraille() -> StringBraille{
-        var stringBraile: StringBraille!
+        var stringBraile: StringBraille = StringBraille()
+    
         
         let words = self.stringToArray()
+        
       
         // Process each word to know its type
         for word in words{
             let type = typeOf(word)
             
+            // knowing the type of the word, the word is sent for translation
             switch (type){
             
                 case .fullLower:
+                    stringBraile.words.append(contentsOf: self.transelateFullLower(word: word))
+                    
                     break
                 case .fullUper:
                     break
@@ -34,7 +39,7 @@ extension String{
                     break
             }
         }
-        stringBraile = StringBraille(a: "asd")
+        
         return stringBraile
     }
 
@@ -89,6 +94,17 @@ extension String{
         else{type = WordType.numeralMixLetter}
         
         return type
+    }
+    
+    private func transelateFullLower(word: String) -> [LetterBraille]{
+        
+        var leters = [LetterBraille]()
+        
+        for letter in word{
+            print(letter)
+        }
+        
+        return [[true, false, false, false, false, false]]
     }
 }
 

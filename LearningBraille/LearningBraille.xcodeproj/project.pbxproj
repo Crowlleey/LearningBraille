@@ -15,6 +15,7 @@
 		5E4148E92053754B001B1892 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E4148E72053754B001B1892 /* LaunchScreen.storyboard */; };
 		5E41490D205375F8001B1892 /* BrailleConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E41490C205375F8001B1892 /* BrailleConverter.swift */; };
 		5E41490F20549A49001B1892 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E41490E20549A49001B1892 /* Groups.swift */; };
+		5E965CA920B3B5CD00FB6EE9 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E965CA820B3B5CD00FB6EE9 /* ListViewController.swift */; };
 		5E9A440920B3670600E70E78 /* BLEConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9A440820B3670600E70E78 /* BLEConnector.swift */; };
 		5E9A440C20B36F0400E70E78 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9A440B20B36F0400E70E78 /* Cell.swift */; };
 		5EA1DCC9208569F300A31BE3 /* Simbles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA1DCC8208569F300A31BE3 /* Simbles.swift */; };
@@ -55,6 +56,8 @@
 		5E4148FA2053754C001B1892 /* LearningBrailleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearningBrailleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E41490C205375F8001B1892 /* BrailleConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrailleConverter.swift; sourceTree = "<group>"; };
 		5E41490E20549A49001B1892 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
+		5E965CA820B3B5CD00FB6EE9 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		5E965CAB20B3B75F00FB6EE9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		5E9A440820B3670600E70E78 /* BLEConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEConnector.swift; sourceTree = "<group>"; };
 		5E9A440B20B36F0400E70E78 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		5EA1DCC8208569F300A31BE3 /* Simbles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simbles.swift; sourceTree = "<group>"; };
@@ -163,6 +166,7 @@
 			children = (
 				5E4148DD2053754B001B1892 /* ViewController.swift */,
 				5E9A440B20B36F0400E70E78 /* Cell.swift */,
+				5E965CA820B3B5CD00FB6EE9 /* ListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -350,6 +354,7 @@
 				5EDFF62C2060511E002FF36A /* StringBraille.swift in Sources */,
 				5E4148E42053754B001B1892 /* LearningBraille.xcdatamodeld in Sources */,
 				5E9A440920B3670600E70E78 /* BLEConnector.swift in Sources */,
+				5E965CA920B3B5CD00FB6EE9 /* ListViewController.swift in Sources */,
 				5EA1DCCF2086972000A31BE3 /* ParseJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,6 +393,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				5E4148E02053754B001B1892 /* Base */,
+				5E965CAB20B3B75F00FB6EE9 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

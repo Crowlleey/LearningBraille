@@ -13,8 +13,6 @@ class ParseJSON {
     static let sharedInstance = ParseJSON()
     private init() { }
 
-   
-    
     func brailleFrom(this letter: String) -> LetterBraille{
         var letters: [String: LetterBraille] = [String: LetterBraille]()
         var letterToReturn: LetterBraille!

@@ -8,4 +8,4 @@
 
 import Foundation
 
-let simbles = ["/"]
+let simbles = ["?","."]

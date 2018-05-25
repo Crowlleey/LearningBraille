@@ -13,10 +13,8 @@ extension String{
     func convertToBraille() -> StringBraille{
         var stringBraile: StringBraille = StringBraille()
     
-        
         let words = self.stringToArray()
         
-      
         // Process each word to know its type
         for word in words{
             let type = typeOf(word)
@@ -39,13 +37,16 @@ extension String{
                     stringBraile.words.append(space())
                     break
                 case .numeral:
+                    stringBraile.words.append(numeral())
+                    stringBraile.words.append(contentsOf: self.translateNumerals(word))
+                    stringBraile.words.append(space())
                     break
                 case .numeralMixLetter:
-                    print("NumeralMixLetter")
+                    stringBraile.words.append(contentsOf: self.translateLetters(word))
+                    stringBraile.words.append(space())
                     break
             }
         }
-        
         return stringBraile
     }
 
@@ -53,44 +54,42 @@ extension String{
     
     // Array with each word
     func stringToArray() -> [String] {
+
         var words = [String]()
-            self.enumerateSubstrings(in: self.startIndex..<self.endIndex, options: .byWords) {
-            ss, r, r2, stop in
-            words.append(ss!)
+        let wordsToReturn = self.split(separator: " ")
+        
+        for wor in wordsToReturn{
+            words.append(String(wor))
         }
+    
         return words
     }
     
     // Process each word to know its type
     private func typeOf(_ word: String) -> WordType{
-  
+
         var low = false
         var upper = false
         var number = false
         var simble = false
         
         for letter in word{
-            //Check letter type in word
-            let st = String(letter)
-            if(st.lowercased() == st){low = true}
-            if(st.uppercased() == st){upper = true}
-            
+           print(letter)
             //Check if contain simbles
             for simb in simbles {
                 if(simb == String(letter)){
-                    print("HAS SIMBLE")
                     simble = true
+                }else if(CharacterSet.decimalDigits.isSuperset(of: CharacterSet(charactersIn: String(letter)))){
+                    number = true
+                }else{
+                    //Check letter type in word
+                    let st = String(letter)
+                    if(st.lowercased() == st){low = true}
+                    if(st.uppercased() == st){upper = true}
                 }
             }
         }
-        
-        //Check if contain a number
-        let decimalCharacters = CharacterSet.decimalDigits
-        let decimalRange = word.rangeOfCharacter(from: decimalCharacters)
-        if decimalRange != nil {
-            number = true
-        }
-        
+     
         var type: WordType!
         
         if(low == true && upper == false && number == false && simble == false){type = WordType.fullLower}
@@ -106,16 +105,36 @@ extension String{
         var letters = [LetterBraille]()
         
         let lowerCase = CharacterSet.lowercaseLetters
-           
+        var isSimble = false
+        
         for currentCharacter in word.unicodeScalars {
-            
-            if lowerCase.contains(currentCharacter) {
-                letters.append(ParseJSON.sharedInstance.brailleFrom(this: String(currentCharacter)))
-
-            } else {
-                letters.append(uppercaseSimble())
-                letters.append(ParseJSON.sharedInstance.brailleFrom(this: String(currentCharacter).lowercased()))
+            for simb in simbles { // if is a simble
+                if(simb == String(String(currentCharacter))){
+                    isSimble = true
+                }
             }
+            if(isSimble){
+                  letters.append(ParseJSON.sharedInstance.brailleFrom(this: String(currentCharacter)))
+            }else if(CharacterSet.decimalDigits.isSuperset(of: CharacterSet(charactersIn: String(currentCharacter)))){ // if is a number
+                letters.append(numeral())
+                letters.append(ParseJSON.sharedInstance.brailleFrom(this: String(currentCharacter)))
+                
+            }else{
+                if lowerCase.contains(currentCharacter) { // if is lowercase
+                    letters.append(ParseJSON.sharedInstance.brailleFrom(this: String(currentCharacter)))
+                } else {// if is uppercase
+                    letters.append(uppercaseSimble())
+                    letters.append(ParseJSON.sharedInstance.brailleFrom(this: String(currentCharacter).lowercased()))
+                }
+            }
+        }
+        return letters
+    }
+    
+    private func translateNumerals(_ numbers: String) -> [LetterBraille]{
+        var letters = [LetterBraille]()
+        for number in numbers{
+            letters.append(ParseJSON.sharedInstance.brailleFrom(this: String(number)))
         }
         return letters
     }
@@ -124,8 +143,16 @@ extension String{
         return  ParseJSON.sharedInstance.brailleFrom(this: " ")
     }
     
+    private func lowercaseSinble() -> LetterBraille{
+        return ParseJSON.sharedInstance.brailleFrom(this: "lowercaseSimble")
+    }
+    
     private func uppercaseSimble() -> LetterBraille{
         return  ParseJSON.sharedInstance.brailleFrom(this: "uppercaseSimble")
+    }
+    
+    private func numeral() -> LetterBraille{
+        return ParseJSON.sharedInstance.brailleFrom(this: "numeral")
     }
 }
 

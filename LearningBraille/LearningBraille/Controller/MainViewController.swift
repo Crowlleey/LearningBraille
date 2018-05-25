@@ -20,12 +20,18 @@ class MainViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        stBraille = "GEORGE"
+        stBraille = "AA a aA a2 2a G2 GG2"
      
         let sttt = stBraille.convertToBraille()
         
         for words in sttt.words{
-            print(words)
+            if(words == [false,false,false,false,false,false,]){
+                print("")
+                print("")
+            }else{
+                
+                print(words)
+            }
         }
         
     }

@@ -9,9 +9,9 @@
 import UIKit
 import CoreBluetooth
 
-class ViewController: UIViewController{
+class MainViewController: UIViewController{
     
-  @IBOutlet weak var tableViewDevices: UITableView!
+
     
     var stBraille: String!
     
@@ -19,7 +19,14 @@ class ViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        stBraille = "GEORGE"
      
+        let sttt = stBraille.convertToBraille()
+        
+        for words in sttt.words{
+            print(words)
+        }
         
     }
 

@@ -25,12 +25,18 @@ extension String{
             switch (type){
             
                 case .fullLower:
-                    stringBraile.words.append(contentsOf: self.transelateFullLower(word: word))
-                    
+                    stringBraile.words.append(contentsOf: self.translateLetters(word))
+                    stringBraile.words.append(space())
                     break
                 case .fullUper:
+                    stringBraile.words.append(uppercaseSimble())
+                    stringBraile.words.append(uppercaseSimble())
+                    stringBraile.words.append(contentsOf: self.translateLetters(word.lowercased()))
+                    stringBraile.words.append(space())
                     break
                 case .letterMix:
+                    stringBraile.words.append(contentsOf: self.translateLetters(word))
+                    stringBraile.words.append(space())
                     break
                 case .numeral:
                     break
@@ -96,15 +102,30 @@ extension String{
         return type
     }
     
-    private func transelateFullLower(word: String) -> [LetterBraille]{
+    private func translateLetters(_ word: String) -> [LetterBraille]{
+        var letters = [LetterBraille]()
         
-        var leters = [LetterBraille]()
-        
-        for letter in word{
-            print(letter)
+        let lowerCase = CharacterSet.lowercaseLetters
+           
+        for currentCharacter in word.unicodeScalars {
+            
+            if lowerCase.contains(currentCharacter) {
+                letters.append(ParseJSON.sharedInstance.brailleFrom(this: String(currentCharacter)))
+
+            } else {
+                letters.append(uppercaseSimble())
+                letters.append(ParseJSON.sharedInstance.brailleFrom(this: String(currentCharacter).lowercased()))
+            }
         }
-        
-        return [[true, false, false, false, false, false]]
+        return letters
+    }
+    
+    private func space() -> LetterBraille{
+        return  ParseJSON.sharedInstance.brailleFrom(this: " ")
+    }
+    
+    private func uppercaseSimble() -> LetterBraille{
+        return  ParseJSON.sharedInstance.brailleFrom(this: "uppercaseSimble")
     }
 }
 

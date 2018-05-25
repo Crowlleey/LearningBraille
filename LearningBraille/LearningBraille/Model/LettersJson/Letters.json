@@ -40,7 +40,8 @@
     "à" : [true, true, false, true, false, true],
     "ï" : [true, true, false, true, true, true],
     "ü" : [true, true, false, false, true, true],
-    "õ" : [false, true, false, true, true, true]
+    "õ" : [false, true, false, true, true, true],
+    "uppercaseSimble" : [false, false, false, true, false, true]
     }
 
 

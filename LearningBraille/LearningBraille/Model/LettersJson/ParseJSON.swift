@@ -10,43 +10,33 @@ import Foundation
 
 class ParseJSON {
     
-var letters: [String: LetterBraille] = [String: LetterBraille]()
+    static let sharedInstance = ParseJSON()
+    private init() { }
+
+   
     
-    
-func parseJsonClass(){
+    func brailleFrom(this letter: String) -> LetterBraille{
+        var letters: [String: LetterBraille] = [String: LetterBraille]()
+        var letterToReturn: LetterBraille!
+        
         if let path = Bundle.main.url(forResource:"Letters" , withExtension: "json"){
             do{
                 let data = try Data(contentsOf: path)
                 let result = try JSONSerialization.jsonObject(with: data, options: []) as? [String: [Bool]]
+                
                 if let resultD = result{
-                        self.letters = resultD
+                   letters = resultD
                     
                     for re in letters{
-                        print(re.key)
-                        print(re.value)
+                        if (re.key == letter){
+                            letterToReturn = re.value
+                        }
                     }
                 }
-                
             }catch let err{
-
                 print(err)
             }
         }
-//
-//    if let path = Bundle.main.url(forResource:"Names" , withExtension: "json"){
-//        do{
-//            let data = try Data(contentsOf: path)
-//            var i = try JSONSerialization.jsonObject(with: data, options: []) as? [String: (String, String)]
-//            print(i)
-//
-//        }catch let err{
-//
-//            print(err)
-//        }
-//    }
-    
-    
-    
-    
+     return letterToReturn
     }
 }

@@ -68,8 +68,6 @@ class ParseJSON {
                 print(err)
             }
         }
-        
-        
     }
     
     func brailleFrom(this letter: String) -> LetterBraille {
@@ -114,5 +112,4 @@ class ParseJSON {
         let randomWord = words[Int(arc4random_uniform(UInt32(words.count)))]
         return randomWord
     }
-    
 }

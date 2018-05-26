@@ -8,7 +8,12 @@
 
 import UIKit
 
+protocol Atualize{
+    func update(_ word: String)
+}
+
 class CorrectWordDelegate: NSObject, UICollectionViewDataSource, UICollectionViewDelegate{
+ 
     var word: String!
     
     init(with word: String) {
@@ -27,5 +32,16 @@ class CorrectWordDelegate: NSObject, UICollectionViewDataSource, UICollectionVie
         wCell.letter = letterB.words[indexPath.row]
         wCell.update()
         return wCell
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+//        return CGSize(collectionView.frame.size.width, collectionView.frame.size.height)
+    }
+}
+
+extension CorrectWordDelegate: Atualize{
+    func update(_ word: String) {
+        self.word = word
     }
 }

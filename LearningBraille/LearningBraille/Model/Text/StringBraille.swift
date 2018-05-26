@@ -35,7 +35,6 @@ struct StringBraille{
     
 }
 
-
 extension StringBraille{
  
     func brailleConvert() -> String{
@@ -46,6 +45,4 @@ extension StringBraille{
     func typeToProcess(_ word: Any) -> WordType {
         return .numeral
     }
-    
-    
 }

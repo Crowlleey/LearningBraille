@@ -41,7 +41,8 @@
     "ï" : [true, true, false, true, true, true],
     "ü" : [true, true, false, false, true, true],
     "õ" : [false, true, false, true, true, true],
-  
+    "ã" : [false, false, true, true, true, false],
+    "ó" : [false, false, true, true, false, true],
     
     "?" : [false, true, false, true, false, false],
     "." : [false, true, false, true, true, false]

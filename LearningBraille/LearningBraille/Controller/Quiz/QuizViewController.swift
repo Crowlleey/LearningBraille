@@ -24,6 +24,7 @@ class QuizViewController: UIViewController{
     var wrongWord: String!
     
     var dataS: CorrectWordDelegate!
+    var atualize: Atualize!
     
     override func viewDidLoad() {
 
@@ -32,6 +33,7 @@ class QuizViewController: UIViewController{
 
         self.dataS =  CorrectWordDelegate(with: self.correctWord)
         self.cvCorrectWord.dataSource = dataS
+        self.atualize = dataS
     }
     
     @IBAction func btJump(_ sender: Any) {
@@ -48,6 +50,7 @@ class QuizViewController: UIViewController{
         self.lbCorrectWord.text = correctWord
         self.lbWrongWord.text = wrongWord
         DispatchQueue.main.async {
+            self.atualize.update(self.correctWord)
             self.cvCorrectWord.reloadData()
         }
     }

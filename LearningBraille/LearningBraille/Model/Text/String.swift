@@ -61,7 +61,6 @@ extension String{
         for wor in wordsToReturn{
             words.append(String(wor))
         }
-    
         return words
     }
     
@@ -142,7 +141,7 @@ extension String{
         return  ParseJSON.sharedInstance.brailleFrom(this: " ")
     }
     
-    private func lowercaseSinble() -> LetterBraille{
+    private func lowercaseSimble() -> LetterBraille{
         return ParseJSON.sharedInstance.brailleFromThis(simble: "lowercaseSimble")
     }
     

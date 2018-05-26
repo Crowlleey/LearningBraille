@@ -13,8 +13,6 @@
 		5E4148E42053754B001B1892 /* LearningBraille.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5E4148E22053754B001B1892 /* LearningBraille.xcdatamodeld */; };
 		5E4148E62053754B001B1892 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E4148E52053754B001B1892 /* Assets.xcassets */; };
 		5E4148E92053754B001B1892 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E4148E72053754B001B1892 /* LaunchScreen.storyboard */; };
-		5E41490D205375F8001B1892 /* BrailleConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E41490C205375F8001B1892 /* BrailleConverter.swift */; };
-		5E41490F20549A49001B1892 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E41490E20549A49001B1892 /* Groups.swift */; };
 		5E835E6020B8D6EC00E2A9F8 /* Simbles.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E835E5F20B8D6EC00E2A9F8 /* Simbles.json */; };
 		5E835E6220B8D73900E2A9F8 /* Numbers.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E835E6120B8D73900E2A9F8 /* Numbers.json */; };
 		5E86156520B7D72700BE0B15 /* ReadTextController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E86156420B7D72700BE0B15 /* ReadTextController.swift */; };
@@ -61,8 +59,6 @@
 		5E4148EA2053754B001B1892 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E4148EF2053754C001B1892 /* LearningBrailleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearningBrailleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E4148FA2053754C001B1892 /* LearningBrailleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearningBrailleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E41490C205375F8001B1892 /* BrailleConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrailleConverter.swift; sourceTree = "<group>"; };
-		5E41490E20549A49001B1892 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
 		5E835E5F20B8D6EC00E2A9F8 /* Simbles.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Simbles.json; sourceTree = "<group>"; };
 		5E835E6120B8D73900E2A9F8 /* Numbers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Numbers.json; sourceTree = "<group>"; };
 		5E86156420B7D72700BE0B15 /* ReadTextController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadTextController.swift; sourceTree = "<group>"; };
@@ -134,7 +130,6 @@
 				5EDC50BC20782FEB007AE8AB /* View */,
 				5EDC50BD20782FF1007AE8AB /* Controller */,
 				5E4148EA2053754B001B1892 /* Info.plist */,
-				5EDFF62820604FB8002FF36A /* Old */,
 			);
 			path = LearningBraille;
 			sourceTree = "<group>";
@@ -242,15 +237,6 @@
 				5E86156620B7DE7300BE0B15 /* Simbles.swift */,
 			);
 			path = Text;
-			sourceTree = "<group>";
-		};
-		5EDFF62820604FB8002FF36A /* Old */ = {
-			isa = PBXGroup;
-			children = (
-				5E41490C205375F8001B1892 /* BrailleConverter.swift */,
-				5E41490E20549A49001B1892 /* Groups.swift */,
-			);
-			path = Old;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,7 +377,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E41490D205375F8001B1892 /* BrailleConverter.swift in Sources */,
 				5EDFF62620604AF8002FF36A /* String.swift in Sources */,
 				5E86156920B8655A00BE0B15 /* QuizViewController.swift in Sources */,
 				5E86156520B7D72700BE0B15 /* ReadTextController.swift in Sources */,
@@ -399,7 +384,6 @@
 				5E4148DE2053754B001B1892 /* MainViewController.swift in Sources */,
 				5E9A440C20B36F0400E70E78 /* Cell.swift in Sources */,
 				5E4148DC2053754B001B1892 /* AppDelegate.swift in Sources */,
-				5E41490F20549A49001B1892 /* Groups.swift in Sources */,
 				5EDFF62C2060511E002FF36A /* StringBraille.swift in Sources */,
 				5E86157220B8ADA300BE0B15 /* CorrectWordCell.swift in Sources */,
 				5E4148E42053754B001B1892 /* LearningBraille.xcdatamodeld in Sources */,

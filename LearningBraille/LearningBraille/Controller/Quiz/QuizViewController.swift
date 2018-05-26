@@ -47,7 +47,9 @@ class QuizViewController: UIViewController{
         
         self.lbCorrectWord.text = correctWord
         self.lbWrongWord.text = wrongWord
-        
+        DispatchQueue.main.async {
+            self.cvCorrectWord.reloadData()
+        }
     }
     
     func replace(myString: String, _ index: Int, _ newChar: Character) -> String {
@@ -56,5 +58,4 @@ class QuizViewController: UIViewController{
         let modifiedString = String(chars)
         return modifiedString
     }
-    
 }

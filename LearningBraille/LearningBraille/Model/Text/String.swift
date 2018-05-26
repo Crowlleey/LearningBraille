@@ -74,7 +74,6 @@ extension String{
         var simble = false
         
         for letter in word{
-           print(letter)
             //Check if contain simbles
             for simb in simbles {
                 if(simb == String(letter)){
@@ -117,7 +116,7 @@ extension String{
                   letters.append(ParseJSON.sharedInstance.brailleFrom(this: String(currentCharacter)))
             }else if(CharacterSet.decimalDigits.isSuperset(of: CharacterSet(charactersIn: String(currentCharacter)))){ // if is a number
                 letters.append(numeral())
-                letters.append(ParseJSON.sharedInstance.brailleFrom(this: String(currentCharacter)))
+                letters.append(ParseJSON.sharedInstance.brailleFromThis(number: String(currentCharacter)))
                 
             }else{
                 if lowerCase.contains(currentCharacter) { // if is lowercase
@@ -134,7 +133,7 @@ extension String{
     private func translateNumerals(_ numbers: String) -> [LetterBraille]{
         var letters = [LetterBraille]()
         for number in numbers{
-            letters.append(ParseJSON.sharedInstance.brailleFrom(this: String(number)))
+            letters.append(ParseJSON.sharedInstance.brailleFromThis(number: String(number)))
         }
         return letters
     }
@@ -144,15 +143,15 @@ extension String{
     }
     
     private func lowercaseSinble() -> LetterBraille{
-        return ParseJSON.sharedInstance.brailleFrom(this: "lowercaseSimble")
+        return ParseJSON.sharedInstance.brailleFromThis(simble: "lowercaseSimble")
     }
     
     private func uppercaseSimble() -> LetterBraille{
-        return  ParseJSON.sharedInstance.brailleFrom(this: "uppercaseSimble")
+        return ParseJSON.sharedInstance.brailleFromThis(simble: "uppercaseSimble")
     }
     
     private func numeral() -> LetterBraille{
-        return ParseJSON.sharedInstance.brailleFrom(this: "numeral")
+        return ParseJSON.sharedInstance.brailleFromThis(simble:  "numeral")
     }
 }
 

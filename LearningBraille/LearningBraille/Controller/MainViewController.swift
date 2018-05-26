@@ -20,23 +20,26 @@ class MainViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        stBraille = "AA a aA a2 2a G2 GG2"
+        stBraille = "?a"
      
         let sttt = stBraille.convertToBraille()
         
-        for words in sttt.words{
-            if(words == [false,false,false,false,false,false,]){
-                print("")
-                print("")
-            }else{
-                
-                print(words)
-            }
-        }
+//        for words in sttt.words{
+//            if(words == [false,false,false,false,false,false,]){
+//                print("")
+//                print("")
+//            }else{
+//                print(words)
+//            }
+//        }
         
     }
 
-
+    
+    @IBAction func exercise(_ sender: Any) {
+        performSegue(withIdentifier: "toGame", sender: nil)
+    }
+    
 }
 
 

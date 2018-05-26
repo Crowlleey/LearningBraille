@@ -41,19 +41,7 @@
     "ï" : [true, true, false, true, true, true],
     "ü" : [true, true, false, false, true, true],
     "õ" : [false, true, false, true, true, true],
-    "lowercaseSimble": [false, false, false, false, true, false],
-    "uppercaseSimble" : [false, false, false, true, false, true],
-    "numeral" : [false, false, true, true, true, true],
-    "1" : [true, false, false, false, false, false],
-    "2" : [true, true, false, false, false, false],
-    "3" : [true, false, false, true, false, false],
-    "4" : [true, false, false, true, true, false],
-    "5" : [true, false, false, false, true, false],
-    "6" : [true, true, false, true, false, false],
-    "7" : [true, true, false, true, true, false],
-    "8" : [true, true, false, false, true, false],
-    "9" : [false, true, false, true, false, false],
-    "0" : [false, true, false, true, true, false],
+  
     
     "?" : [false, true, false, true, false, false],
     "." : [false, true, false, true, true, false]

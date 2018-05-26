@@ -1,0 +1,5 @@
+{
+    "lowercaseSimble": [false, false, false, false, true, false],
+    "uppercaseSimble" : [false, false, false, true, false, true],
+    "numeral" : [false, false, true, true, true, true],
+}

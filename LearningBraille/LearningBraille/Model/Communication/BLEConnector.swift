@@ -39,14 +39,11 @@ class BLEConnector: NSObject{
     }
     
     func read() {
-        print("oloco")
         if( self.isReady ) {
             guard let characterist = self.characterist else { return }
             self.myBluetoothPeripheral.readValue(for: characterist)
-            print("oloco2")
         }
-    }
-    
+    }    
 }
 
 extension BLEConnector: CBCentralManagerDelegate{

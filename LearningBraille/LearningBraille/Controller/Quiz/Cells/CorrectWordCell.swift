@@ -12,7 +12,6 @@ class CorrectWordCell: UICollectionViewCell {
     
     var letter: LetterBraille!
     
-
     @IBOutlet weak var view1: UIView!
     @IBOutlet weak var view2: UIView!
     @IBOutlet weak var view3: UIView!

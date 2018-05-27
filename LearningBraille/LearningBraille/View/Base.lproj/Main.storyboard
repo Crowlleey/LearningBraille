@@ -230,13 +230,106 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="fk0-xW-Ri3">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="brailleCorrect" id="xvg-q6-aLa" customClass="CorrectWordCell" customModule="LearningBraille" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="59" height="83"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                             <rect key="frame" x="0.0" y="0.0" width="59" height="83"/>
                                                             <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iPo-kO-XMx">
+                                                                    <rect key="frame" x="2" y="2" width="23.666666666666668" height="23.666666666666668"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <integer key="value" value="6"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aag-aa-h2e">
+                                                                    <rect key="frame" x="2" y="27.666666666666671" width="23.666666666666668" height="24"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <integer key="value" value="6"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zTR-7c-p2e">
+                                                                    <rect key="frame" x="2" y="53.666666666666664" width="23.666666666666668" height="23.333333333333336"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <integer key="value" value="6"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k20-Ud-i30">
+                                                                    <rect key="frame" x="27.666666666666671" y="2" width="23.333333333333329" height="23.666666666666668"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <integer key="value" value="6"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Fm-eP-3fQ">
+                                                                    <rect key="frame" x="27.666666666666671" y="27.666666666666671" width="23.333333333333329" height="24"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <integer key="value" value="6"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ow4-Gv-a5j">
+                                                                    <rect key="frame" x="27.666666666666671" y="53.666666666666664" width="23.333333333333329" height="23.333333333333336"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <integer key="value" value="6"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                            </subviews>
                                                         </view>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="Ow4-Gv-a5j" secondAttribute="trailing" constant="2" id="0MA-PW-NuI"/>
+                                                            <constraint firstItem="zTR-7c-p2e" firstAttribute="top" secondItem="aag-aa-h2e" secondAttribute="bottom" constant="2" id="1cW-9G-GoU"/>
+                                                            <constraint firstItem="zTR-7c-p2e" firstAttribute="height" secondItem="iPo-kO-XMx" secondAttribute="height" id="5n5-aU-UMF"/>
+                                                            <constraint firstItem="zTR-7c-p2e" firstAttribute="width" secondItem="iPo-kO-XMx" secondAttribute="width" id="6uK-R1-qXK"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Ow4-Gv-a5j" secondAttribute="bottom" constant="2" id="9Ud-bL-qed"/>
+                                                            <constraint firstItem="9Fm-eP-3fQ" firstAttribute="top" secondItem="k20-Ud-i30" secondAttribute="bottom" constant="2" id="F8K-UD-dob"/>
+                                                            <constraint firstAttribute="bottom" secondItem="zTR-7c-p2e" secondAttribute="bottom" constant="2" id="FsK-Qt-Tlu"/>
+                                                            <constraint firstItem="iPo-kO-XMx" firstAttribute="leading" secondItem="xvg-q6-aLa" secondAttribute="leading" constant="2" id="Gkh-ay-gGN"/>
+                                                            <constraint firstAttribute="trailing" secondItem="k20-Ud-i30" secondAttribute="trailing" constant="2" id="IhI-Su-CU3"/>
+                                                            <constraint firstItem="Ow4-Gv-a5j" firstAttribute="width" secondItem="iPo-kO-XMx" secondAttribute="width" id="Kkm-lb-7gV"/>
+                                                            <constraint firstItem="k20-Ud-i30" firstAttribute="height" secondItem="iPo-kO-XMx" secondAttribute="height" id="NyL-AA-aVU"/>
+                                                            <constraint firstItem="aag-aa-h2e" firstAttribute="top" secondItem="iPo-kO-XMx" secondAttribute="bottom" constant="2" id="P40-Mo-Oo2"/>
+                                                            <constraint firstItem="zTR-7c-p2e" firstAttribute="leading" secondItem="xvg-q6-aLa" secondAttribute="leading" constant="2" id="RpF-Rz-afp"/>
+                                                            <constraint firstItem="9Fm-eP-3fQ" firstAttribute="leading" secondItem="aag-aa-h2e" secondAttribute="trailing" constant="2" id="X32-UR-dhJ"/>
+                                                            <constraint firstItem="Ow4-Gv-a5j" firstAttribute="top" secondItem="9Fm-eP-3fQ" secondAttribute="bottom" constant="2" id="bmb-Gl-g42"/>
+                                                            <constraint firstItem="aag-aa-h2e" firstAttribute="height" secondItem="iPo-kO-XMx" secondAttribute="height" id="bwU-ZP-bs0"/>
+                                                            <constraint firstItem="iPo-kO-XMx" firstAttribute="top" secondItem="xvg-q6-aLa" secondAttribute="top" constant="2" id="cQE-o3-inW"/>
+                                                            <constraint firstItem="k20-Ud-i30" firstAttribute="top" secondItem="xvg-q6-aLa" secondAttribute="top" constant="2" id="fjR-lu-7kp"/>
+                                                            <constraint firstItem="Ow4-Gv-a5j" firstAttribute="height" secondItem="iPo-kO-XMx" secondAttribute="height" id="gQU-O7-irz"/>
+                                                            <constraint firstItem="aag-aa-h2e" firstAttribute="leading" secondItem="xvg-q6-aLa" secondAttribute="leading" constant="2" id="lPl-QP-TuH"/>
+                                                            <constraint firstItem="k20-Ud-i30" firstAttribute="leading" secondItem="iPo-kO-XMx" secondAttribute="trailing" constant="2" id="mrm-Z7-1pD"/>
+                                                            <constraint firstItem="9Fm-eP-3fQ" firstAttribute="width" secondItem="iPo-kO-XMx" secondAttribute="width" id="nFq-V1-h3E"/>
+                                                            <constraint firstItem="Ow4-Gv-a5j" firstAttribute="leading" secondItem="zTR-7c-p2e" secondAttribute="trailing" constant="2" id="qrV-kk-OR2"/>
+                                                            <constraint firstAttribute="trailing" secondItem="9Fm-eP-3fQ" secondAttribute="trailing" constant="2" id="rAx-g3-j4I"/>
+                                                            <constraint firstItem="9Fm-eP-3fQ" firstAttribute="height" secondItem="iPo-kO-XMx" secondAttribute="height" id="vg7-Al-jZh"/>
+                                                            <constraint firstItem="k20-Ud-i30" firstAttribute="width" secondItem="iPo-kO-XMx" secondAttribute="width" id="zex-Vz-Gme"/>
+                                                            <constraint firstItem="aag-aa-h2e" firstAttribute="width" secondItem="iPo-kO-XMx" secondAttribute="width" id="zuJ-RZ-LX2"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <outlet property="view1" destination="iPo-kO-XMx" id="xyd-uW-zqc"/>
+                                                            <outlet property="view2" destination="aag-aa-h2e" id="I3V-G8-Cdt"/>
+                                                            <outlet property="view3" destination="zTR-7c-p2e" id="4D6-D4-qzu"/>
+                                                            <outlet property="view4" destination="k20-Ud-i30" id="pul-eM-4QN"/>
+                                                            <outlet property="view5" destination="9Fm-eP-3fQ" id="e1a-My-w03"/>
+                                                            <outlet property="view6" destination="Ow4-Gv-a5j" id="ZYy-VU-tR7"/>
+                                                        </connections>
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>

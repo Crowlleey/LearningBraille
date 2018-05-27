@@ -24,7 +24,11 @@ class QuizViewController: UIViewController{
     var wrongWord: String!
     
     var dataS: CorrectWordDelegate!
+    var cvWrongDelegate: CorrectWordDelegate!
+    
+    
     var atualize: Atualize!
+    var atualizeWrong: Atualize!
     
     override func viewDidLoad() {
 
@@ -35,6 +39,11 @@ class QuizViewController: UIViewController{
         self.cvCorrectWord.dataSource = dataS
         self.cvCorrectWord.delegate = dataS
         self.atualize = dataS
+        
+        self.cvWrongDelegate = CorrectWordDelegate(with: self.wrongWord)
+        self.cvWrongWord.delegate = cvWrongDelegate
+        self.cvWrongWord.dataSource = cvWrongDelegate
+        self.atualizeWrong = cvWrongDelegate
         
         self.cvCorrectWord.backgroundColor = .gray
     }
@@ -54,7 +63,9 @@ class QuizViewController: UIViewController{
         self.lbWrongWord.text = wrongWord
         DispatchQueue.main.async {
             self.atualize.update(self.correctWord)
+            self.atualizeWrong.update(self.wrongWord)
             self.cvCorrectWord.reloadData()
+            self.cvWrongWord.reloadData()
         }
         
     }

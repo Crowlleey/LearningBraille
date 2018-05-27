@@ -37,11 +37,7 @@ class CorrectWordDelegate: NSObject, UICollectionViewDataSource, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let old = CGSize(width: collectionView.frame.width / CGFloat(collectionView.numberOfItems(inSection: 0)), height: collectionView.frame.height)
-        
-        
-        
-        
-        
+
         return CGSize(width: 60, height: collectionView.frame.height)
     }
     

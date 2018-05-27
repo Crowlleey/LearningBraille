@@ -68,7 +68,6 @@ class QuizViewController: UIViewController{
             self.cvWrongWord.reloadData()
             BLEBridg.sharedInstance.sendToBLE(word: self.wrongWord.convertToBraille())
         }
-        
     }
     
     func replace(myString: String, _ index: Int, _ newChar: Character) -> String {

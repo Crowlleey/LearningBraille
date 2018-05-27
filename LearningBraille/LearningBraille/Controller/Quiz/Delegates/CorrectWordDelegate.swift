@@ -14,29 +14,25 @@ protocol Atualize{
 
 class CorrectWordDelegate: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
  
-    var word: String!
+    var wordBraille: StringBraille!
     
     init(with word: String) {
-        self.word = word
+        self.wordBraille = word.convertToBraille()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.word.count
+        return self.wordBraille.words.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let wCell = collectionView.dequeueReusableCell(withReuseIdentifier: "brailleCorrect", for: indexPath) as! CorrectWordCell
         
-        var letterB = word.convertToBraille()
-        
-        wCell.letter = letterB.words[indexPath.row]
+        wCell.letter = wordBraille.words[indexPath.row]
         wCell.update()
         return wCell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        let old = CGSize(width: collectionView.frame.width / CGFloat(collectionView.numberOfItems(inSection: 0)), height: collectionView.frame.height)
 
         return CGSize(width: 60, height: collectionView.frame.height)
     }
@@ -58,6 +54,6 @@ class CorrectWordDelegate: NSObject, UICollectionViewDataSource, UICollectionVie
 
 extension CorrectWordDelegate: Atualize{
     func update(_ word: String) {
-        self.word = word
+        self.wordBraille = word.convertToBraille()
     }
 }

@@ -24,15 +24,12 @@ class BLEBridg{
             let isIndexValid = word.words.indices.contains(i)
             
             for ib in 1...2{
-
                 if(isIndexValid){
                     if (ib == 1){
                        let type = typeOf(halfLetter: [word.words[i][0], word.words[i][1], word.words[i][2]])
-                        
                         print(chars[count], type)
                     }else{
                        let type = typeOf(halfLetter: [word.words[i][3], word.words[i][4], word.words[i][5]])
-                        
                         print(chars[count], type)
                     }
                 }else{
@@ -42,7 +39,6 @@ class BLEBridg{
                 count = count + 1
             }
         }
-
     }
     
     private func typeOf(halfLetter: [Bool]) -> String{

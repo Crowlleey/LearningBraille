@@ -33,7 +33,10 @@ class QuizViewController: UIViewController{
 
         self.dataS =  CorrectWordDelegate(with: self.correctWord)
         self.cvCorrectWord.dataSource = dataS
+        self.cvCorrectWord.delegate = dataS
         self.atualize = dataS
+        
+        self.cvCorrectWord.backgroundColor = .gray
     }
     
     @IBAction func btJump(_ sender: Any) {
@@ -53,6 +56,7 @@ class QuizViewController: UIViewController{
             self.atualize.update(self.correctWord)
             self.cvCorrectWord.reloadData()
         }
+        
     }
     
     func replace(myString: String, _ index: Int, _ newChar: Character) -> String {

@@ -12,7 +12,7 @@ protocol Atualize{
     func update(_ word: String)
 }
 
-class CorrectWordDelegate: NSObject, UICollectionViewDataSource, UICollectionViewDelegate{
+class CorrectWordDelegate: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
  
     var word: String!
     
@@ -34,9 +34,29 @@ class CorrectWordDelegate: NSObject, UICollectionViewDataSource, UICollectionVie
         return wCell
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
-//        return CGSize(collectionView.frame.size.width, collectionView.frame.size.height)
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let old = CGSize(width: collectionView.frame.width / CGFloat(collectionView.numberOfItems(inSection: 0)), height: collectionView.frame.height)
+        
+        
+        
+        
+        
+        return CGSize(width: 60, height: collectionView.frame.height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+
+        let CellWidth = collectionView.frame.width / CGFloat(collectionView.numberOfItems(inSection: 0))
+        let CellCount = CGFloat(collectionView.numberOfItems(inSection: 0))
+        let totalCellWidth = CellWidth * CellCount
+        let CellSpacing: CGFloat = 1
+        let totalSpacingWidth = CellSpacing * (CellCount - 1)
+        
+        let leftInset = (collectionView.frame.width  - CGFloat(totalCellWidth + totalSpacingWidth)) / 2
+        let rightInset = leftInset
+        
+        return UIEdgeInsetsMake(0, leftInset, 0, rightInset)
     }
 }
 

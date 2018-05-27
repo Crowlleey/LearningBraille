@@ -17,6 +17,8 @@
 		5E835E6220B8D73900E2A9F8 /* Numbers.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E835E6120B8D73900E2A9F8 /* Numbers.json */; };
 		5E835E6420BA609400E2A9F8 /* BLEBridg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E835E6320BA609400E2A9F8 /* BLEBridg.swift */; };
 		5E835E6620BA6B9A00E2A9F8 /* wordsReserva.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E835E6520BA6B9A00E2A9F8 /* wordsReserva.json */; };
+		5E835E6820BB582E00E2A9F8 /* ResponseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E835E6720BB582E00E2A9F8 /* ResponseCell.swift */; };
+		5E835E6A20BB589800E2A9F8 /* ResponseDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E835E6920BB589800E2A9F8 /* ResponseDelegate.swift */; };
 		5E86156520B7D72700BE0B15 /* ReadTextController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E86156420B7D72700BE0B15 /* ReadTextController.swift */; };
 		5E86156720B7DE7300BE0B15 /* Simbles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E86156620B7DE7300BE0B15 /* Simbles.swift */; };
 		5E86156920B8655A00BE0B15 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E86156820B8655A00BE0B15 /* QuizViewController.swift */; };
@@ -65,6 +67,8 @@
 		5E835E6120B8D73900E2A9F8 /* Numbers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Numbers.json; sourceTree = "<group>"; };
 		5E835E6320BA609400E2A9F8 /* BLEBridg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEBridg.swift; sourceTree = "<group>"; };
 		5E835E6520BA6B9A00E2A9F8 /* wordsReserva.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = wordsReserva.json; sourceTree = "<group>"; };
+		5E835E6720BB582E00E2A9F8 /* ResponseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCell.swift; sourceTree = "<group>"; };
+		5E835E6920BB589800E2A9F8 /* ResponseDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDelegate.swift; sourceTree = "<group>"; };
 		5E86156420B7D72700BE0B15 /* ReadTextController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadTextController.swift; sourceTree = "<group>"; };
 		5E86156620B7DE7300BE0B15 /* Simbles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Simbles.swift; sourceTree = "<group>"; };
 		5E86156820B8655A00BE0B15 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				5E86156D20B8AC1300BE0B15 /* CorrectWordDelegate.swift */,
+				5E835E6920BB589800E2A9F8 /* ResponseDelegate.swift */,
 			);
 			path = Delegates;
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				5E86157120B8ADA300BE0B15 /* CorrectWordCell.swift */,
+				5E835E6720BB582E00E2A9F8 /* ResponseCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -388,6 +394,7 @@
 				5E86156920B8655A00BE0B15 /* QuizViewController.swift in Sources */,
 				5E86156520B7D72700BE0B15 /* ReadTextController.swift in Sources */,
 				5EDFF62A20604FEC002FF36A /* Protocols.swift in Sources */,
+				5E835E6820BB582E00E2A9F8 /* ResponseCell.swift in Sources */,
 				5E835E6420BA609400E2A9F8 /* BLEBridg.swift in Sources */,
 				5E4148DE2053754B001B1892 /* MainViewController.swift in Sources */,
 				5E9A440C20B36F0400E70E78 /* Cell.swift in Sources */,
@@ -396,6 +403,7 @@
 				5E86157220B8ADA300BE0B15 /* CorrectWordCell.swift in Sources */,
 				5E4148E42053754B001B1892 /* LearningBraille.xcdatamodeld in Sources */,
 				5E9A440920B3670600E70E78 /* BLEConnector.swift in Sources */,
+				5E835E6A20BB589800E2A9F8 /* ResponseDelegate.swift in Sources */,
 				5E965CA920B3B5CD00FB6EE9 /* ListViewController.swift in Sources */,
 				5E86156E20B8AC1300BE0B15 /* CorrectWordDelegate.swift in Sources */,
 				5EA1DCCF2086972000A31BE3 /* ParseJSON.swift in Sources */,

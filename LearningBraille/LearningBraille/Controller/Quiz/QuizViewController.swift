@@ -25,13 +25,16 @@ class QuizViewController: UIViewController{
     
     var dataS: CorrectWordDelegate!
     var cvWrongDelegate: CorrectWordDelegate!
+    var cvResponseDelegate: ResponseDelegate!
+    var randomIndex: Int!
     
     
     var atualize: Atualize!
     var atualizeWrong: Atualize!
+    var atualizeResponse: Atualize!
+    var atualizeIndex: AtualizeIndex!
     
     override func viewDidLoad() {
-
         super.viewDidLoad()
         jumpWord()
 
@@ -45,6 +48,14 @@ class QuizViewController: UIViewController{
         self.cvWrongWord.dataSource = cvWrongDelegate
         self.atualizeWrong = cvWrongDelegate
         
+        let randomIndex = Int(arc4random_uniform(UInt32(correctWord.count)))
+        self.cvResponseDelegate = ResponseDelegate(with: self.wrongWord, index: randomIndex)
+        self.cvResponse.delegate = cvResponseDelegate
+        self.cvResponse.dataSource = cvResponseDelegate
+        self.atualizeResponse = cvResponseDelegate
+        self.atualizeIndex = cvResponseDelegate
+        
+        
         self.cvCorrectWord.backgroundColor = .gray
     }
     
@@ -57,15 +68,19 @@ class QuizViewController: UIViewController{
         self.wrongCharacterIndex = Int(arc4random_uniform(UInt32(correctWord.count)))
         self.wrongCharacter = ParseJSON.sharedInstance.randomCharacter()
 
-        self.wrongWord = replace(myString: correctWord, Int(arc4random_uniform(UInt32(correctWord.count))), Character(wrongCharacter.key))
+        let randomIndex = Int(arc4random_uniform(UInt32(correctWord.count)))
+        self.wrongWord = replace(myString: correctWord, randomIndex, Character(wrongCharacter.key))
         
         self.lbCorrectWord.text = correctWord
         self.lbWrongWord.text = wrongWord
         DispatchQueue.main.async {
             self.atualize.update(self.correctWord)
             self.atualizeWrong.update(self.wrongWord)
+            self.atualizeResponse.update(self.wrongWord)
+            self.atualizeIndex.update(randomIndex)
             self.cvCorrectWord.reloadData()
             self.cvWrongWord.reloadData()
+            self.cvResponse.reloadData()
             BLEBridg.sharedInstance.sendToBLE(word: self.wrongWord.convertToBraille())
         }
     }

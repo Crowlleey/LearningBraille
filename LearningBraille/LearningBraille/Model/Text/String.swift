@@ -47,6 +47,7 @@ extension String{
                     break
             }
         }
+        stringBraile.words.remove(at: stringBraile.words.count - 1)
         return stringBraile
     }
 

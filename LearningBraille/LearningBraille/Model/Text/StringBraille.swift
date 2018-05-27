@@ -28,11 +28,6 @@ struct StringBraille{
         self.words = words
     }
     
-//    init( dict: [Bool]){
-//        var o: LetterBraille = LetterBraille(dict[0], dict[1], dict[2], dict[3], dict[4], dict[5] )
-//        self.letters = [o]
-//    }
-    
 }
 
 extension StringBraille{

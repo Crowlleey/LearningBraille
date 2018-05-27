@@ -66,6 +66,7 @@ class QuizViewController: UIViewController{
             self.atualizeWrong.update(self.wrongWord)
             self.cvCorrectWord.reloadData()
             self.cvWrongWord.reloadData()
+            BLEBridg.sharedInstance.sendToBLE(word: self.wrongWord.convertToBraille())
         }
         
     }

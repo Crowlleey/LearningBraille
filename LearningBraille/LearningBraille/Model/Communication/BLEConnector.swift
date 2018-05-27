@@ -11,6 +11,8 @@ import CoreBluetooth
 
 class BLEConnector: NSObject{
     
+    static let shared = BLEConnector()
+    
     var centralManager: CBCentralManager!
     var myBluetoothPeripheral : CBPeripheral!
     var peripherals: [CBPeripheral]!{

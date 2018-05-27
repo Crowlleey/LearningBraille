@@ -10,13 +10,9 @@ import UIKit
 import CoreBluetooth
 
 class MainViewController: UIViewController{
-    
 
-    
     var stBraille: String!
     
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,7 +30,6 @@ class MainViewController: UIViewController{
 //        }
         
     }
-
     
     @IBAction func exercise(_ sender: Any) {
         performSegue(withIdentifier: "toGame", sender: nil)

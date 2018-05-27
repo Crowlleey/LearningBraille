@@ -13,7 +13,6 @@ class ResponseCell: UICollectionViewCell{
     
     @IBOutlet weak var lbResponse: UILabel!
     
-    
     func update(){
         self.backgroundColor = .clear
         self.lbResponse.text = String(self.index)

@@ -12,10 +12,15 @@ protocol AtualizeIndex{
     func update(_ index: Int)
 }
 
+protocol ResponseProtocol{
+    func response(_ isValue: Bool)
+}
+
 class ResponseDelegate: NSObject, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     var wordBraille: StringBraille!
     var indexWrong: Int!
+    var delegate: ResponseProtocol!
     
     init(with word: String, index: Int) {
         self.wordBraille = word.convertToBraille()
@@ -57,9 +62,9 @@ class ResponseDelegate: NSObject, UICollectionViewDataSource, UICollectionViewDe
 extension ResponseDelegate: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if(indexPath.row == self.indexWrong){
-            print("Resposta Correta")
+            delegate.response(true)
         }else{
-            print("ERRRRRRRRRROOO")
+            delegate.response(false)
         }
     }
 }

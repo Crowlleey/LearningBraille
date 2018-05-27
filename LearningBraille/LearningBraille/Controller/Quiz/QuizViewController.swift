@@ -50,11 +50,11 @@ class QuizViewController: UIViewController{
         
         let randomIndex = Int(arc4random_uniform(UInt32(correctWord.count)))
         self.cvResponseDelegate = ResponseDelegate(with: self.wrongWord, index: randomIndex)
+        self.cvResponseDelegate.delegate = self
         self.cvResponse.delegate = cvResponseDelegate
         self.cvResponse.dataSource = cvResponseDelegate
         self.atualizeResponse = cvResponseDelegate
         self.atualizeIndex = cvResponseDelegate
-        
         
         self.cvCorrectWord.backgroundColor = .gray
     }
@@ -90,5 +90,16 @@ class QuizViewController: UIViewController{
         chars[index] = newChar
         let modifiedString = String(chars)
         return modifiedString
+    }
+}
+
+extension QuizViewController: ResponseProtocol{
+    func response(_ isValue: Bool) {
+        print(isValue)
+        if (isValue){
+            self.jumpWord()
+        }else{
+            self.jumpWord()
+        }
     }
 }

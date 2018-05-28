@@ -11,7 +11,6 @@
 		5E4148DE2053754B001B1892 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4148DD2053754B001B1892 /* MainViewController.swift */; };
 		5E4148E12053754B001B1892 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E4148DF2053754B001B1892 /* Main.storyboard */; };
 		5E4148E42053754B001B1892 /* LearningBraille.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5E4148E22053754B001B1892 /* LearningBraille.xcdatamodeld */; };
-		5E4148E62053754B001B1892 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E4148E52053754B001B1892 /* Assets.xcassets */; };
 		5E4148E92053754B001B1892 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E4148E72053754B001B1892 /* LaunchScreen.storyboard */; };
 		5E835E6020B8D6EC00E2A9F8 /* Simbles.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E835E5F20B8D6EC00E2A9F8 /* Simbles.json */; };
 		5E835E6220B8D73900E2A9F8 /* Numbers.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E835E6120B8D73900E2A9F8 /* Numbers.json */; };
@@ -19,6 +18,8 @@
 		5E835E6620BA6B9A00E2A9F8 /* wordsReserva.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E835E6520BA6B9A00E2A9F8 /* wordsReserva.json */; };
 		5E835E6820BB582E00E2A9F8 /* ResponseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E835E6720BB582E00E2A9F8 /* ResponseCell.swift */; };
 		5E835E6A20BB589800E2A9F8 /* ResponseDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E835E6920BB589800E2A9F8 /* ResponseDelegate.swift */; };
+		5E835E6C20BB864C00E2A9F8 /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E835E6B20BB864C00E2A9F8 /* FeedbackView.swift */; };
+		5E835E6E20BC411D00E2A9F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E835E6D20BC411D00E2A9F8 /* Assets.xcassets */; };
 		5E86156520B7D72700BE0B15 /* ReadTextController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E86156420B7D72700BE0B15 /* ReadTextController.swift */; };
 		5E86156720B7DE7300BE0B15 /* Simbles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E86156620B7DE7300BE0B15 /* Simbles.swift */; };
 		5E86156920B8655A00BE0B15 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E86156820B8655A00BE0B15 /* QuizViewController.swift */; };
@@ -58,7 +59,6 @@
 		5E4148DD2053754B001B1892 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5E4148E02053754B001B1892 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5E4148E32053754B001B1892 /* LearningBraille.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LearningBraille.xcdatamodel; sourceTree = "<group>"; };
-		5E4148E52053754B001B1892 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E4148E82053754B001B1892 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E4148EA2053754B001B1892 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E4148EF2053754C001B1892 /* LearningBrailleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearningBrailleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +69,8 @@
 		5E835E6520BA6B9A00E2A9F8 /* wordsReserva.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = wordsReserva.json; sourceTree = "<group>"; };
 		5E835E6720BB582E00E2A9F8 /* ResponseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCell.swift; sourceTree = "<group>"; };
 		5E835E6920BB589800E2A9F8 /* ResponseDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDelegate.swift; sourceTree = "<group>"; };
+		5E835E6B20BB864C00E2A9F8 /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
+		5E835E6D20BC411D00E2A9F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E86156420B7D72700BE0B15 /* ReadTextController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadTextController.swift; sourceTree = "<group>"; };
 		5E86156620B7DE7300BE0B15 /* Simbles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Simbles.swift; sourceTree = "<group>"; };
 		5E86156820B8655A00BE0B15 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 		5EDC50BB20782FE4007AE8AB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5E835E6B20BB864C00E2A9F8 /* FeedbackView.swift */,
 				5EA1DCD02086972B00A31BE3 /* LettersJson */,
 				5EDC50C02078303E007AE8AB /* Text */,
 				5E9A440A20B3671000E70E78 /* Communication */,
@@ -226,8 +229,8 @@
 		5EDC50BE2078300D007AE8AB /* Com */ = {
 			isa = PBXGroup;
 			children = (
-				5E4148E52053754B001B1892 /* Assets.xcassets */,
 				5E4148DB2053754B001B1892 /* AppDelegate.swift */,
+				5E835E6D20BC411D00E2A9F8 /* Assets.xcassets */,
 			);
 			path = Com;
 			sourceTree = "<group>";
@@ -361,10 +364,10 @@
 				5E835E6620BA6B9A00E2A9F8 /* wordsReserva.json in Resources */,
 				5E86156B20B8666D00BE0B15 /* Words5Letters.json in Resources */,
 				5E4148E92053754B001B1892 /* LaunchScreen.storyboard in Resources */,
-				5E4148E62053754B001B1892 /* Assets.xcassets in Resources */,
 				5E4148E12053754B001B1892 /* Main.storyboard in Resources */,
 				5EA1DCCD208696D500A31BE3 /* Letters.json in Resources */,
 				5E835E6220B8D73900E2A9F8 /* Numbers.json in Resources */,
+				5E835E6E20BC411D00E2A9F8 /* Assets.xcassets in Resources */,
 				5E835E6020B8D6EC00E2A9F8 /* Simbles.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +407,7 @@
 				5E4148E42053754B001B1892 /* LearningBraille.xcdatamodeld in Sources */,
 				5E9A440920B3670600E70E78 /* BLEConnector.swift in Sources */,
 				5E835E6A20BB589800E2A9F8 /* ResponseDelegate.swift in Sources */,
+				5E835E6C20BB864C00E2A9F8 /* FeedbackView.swift in Sources */,
 				5E965CA920B3B5CD00FB6EE9 /* ListViewController.swift in Sources */,
 				5E86156E20B8AC1300BE0B15 /* CorrectWordDelegate.swift in Sources */,
 				5EA1DCCF2086972000A31BE3 /* ParseJSON.swift in Sources */,

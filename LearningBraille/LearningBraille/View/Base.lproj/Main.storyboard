@@ -466,9 +466,43 @@
                         <outlet property="cvWrongWord" destination="CHC-mk-2fX" id="OHp-3l-OqN"/>
                         <outlet property="lbCorrectWord" destination="5uS-Ks-Fkg" id="DUJ-Le-rsJ"/>
                         <outlet property="lbWrongWord" destination="SLr-Rc-6RK" id="8TX-mp-EuM"/>
+                        <outlet property="vwFeedBack" destination="MpO-1s-vO1" id="rdA-kh-HkY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OJd-zH-81V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="MpO-1s-vO1" customClass="FeedbackView" customModule="LearningBraille" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="371" height="203"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Wrong" translatesAutoresizingMaskIntoConstraints="NO" id="ffz-cG-F2p">
+                            <rect key="frame" x="8" y="60" width="355" height="127"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sk-bt-e4r">
+                            <rect key="frame" x="16" y="30" width="339" height="20.333333333333329"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="eXX-Dh-iD4"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.67157935782621747" blue="0.64294756565667144" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="7sk-bt-e4r" secondAttribute="trailing" constant="16" id="2HT-LR-dre"/>
+                        <constraint firstItem="ffz-cG-F2p" firstAttribute="leading" secondItem="3q1-IG-Vea" secondAttribute="leading" constant="8" id="AX8-Y9-6gy"/>
+                        <constraint firstAttribute="bottom" secondItem="ffz-cG-F2p" secondAttribute="bottom" constant="16" id="CxS-mj-bzG"/>
+                        <constraint firstItem="3q1-IG-Vea" firstAttribute="trailing" secondItem="ffz-cG-F2p" secondAttribute="trailing" constant="8" id="IB9-P2-abX"/>
+                        <constraint firstItem="7sk-bt-e4r" firstAttribute="top" secondItem="MpO-1s-vO1" secondAttribute="top" constant="30" id="Lo9-Tl-uau"/>
+                        <constraint firstItem="7sk-bt-e4r" firstAttribute="leading" secondItem="MpO-1s-vO1" secondAttribute="leading" constant="16" id="yFd-cm-q7W"/>
+                        <constraint firstItem="ffz-cG-F2p" firstAttribute="top" secondItem="3q1-IG-Vea" secondAttribute="top" constant="16" id="zCv-c8-Wme"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="3q1-IG-Vea"/>
+                    <connections>
+                        <outlet property="image" destination="ffz-cG-F2p" id="Mm4-mn-v1M"/>
+                        <outlet property="title" destination="7sk-bt-e4r" id="9U3-tI-YL7"/>
+                    </connections>
+                </view>
             </objects>
             <point key="canvasLocation" x="2052" y="131.78410794602701"/>
         </scene>
@@ -572,4 +606,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Wrong" width="106" height="106"/>
+    </resources>
 </document>

@@ -17,6 +17,8 @@ class QuizViewController: UIViewController{
     @IBOutlet weak var cvWrongWord: UICollectionView!
     @IBOutlet weak var cvResponse: UICollectionView!
     
+    @IBOutlet var vwFeedBack: FeedbackView!
+    
     var correctResponse: Int!
     var correctWord: String!
     var wrongCharacter: (key: String, value: LetterBraille)!
@@ -95,11 +97,42 @@ class QuizViewController: UIViewController{
 
 extension QuizViewController: ResponseProtocol{
     func response(_ isValue: Bool) {
-        print(isValue)
-        if (isValue){
-            self.jumpWord()
-        }else{
-            self.jumpWord()
+        let midX = self.view.frame.midX
+        let midY = self.view.frame.midY
+        let frame = self.view.frame
+        let viewPositionX = midX - midX / 1.5
+        let viewPositionY = midY - midY / 2
+        
+        let blurEffect = UIBlurEffect(style:.light)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = self.view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        vwFeedBack.frame = CGRect(x: viewPositionX, y: viewPositionY, width: frame.width / 1.5, height: frame.height / 2)
+        vwFeedBack.update(correct: isValue)
+        
+        vwFeedBack.alpha = 0
+        blurEffectView.alpha = 0
+        
+        UIView.animate(withDuration: 0.5, animations: {
+            self.vwFeedBack.alpha = 1.0
+            blurEffectView.alpha = 1.0
+        })
+
+        self.view.addSubview(blurEffectView)
+        self.view.addSubview(vwFeedBack)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            UIView.animate(withDuration: 0.5, animations: {
+                self.vwFeedBack.alpha = 0
+                blurEffectView.alpha = 0
+                self.jumpWord()
+            })
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            UIView.animate(withDuration: 0.5, animations: {
+                blurEffectView.removeFromSuperview()
+                self.vwFeedBack.removeFromSuperview()
+            })
         }
     }
 }

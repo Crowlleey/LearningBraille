@@ -28,8 +28,6 @@ class ListViewController: UIViewController{
      
         self.connector.send(value: "g")
     }
-    
-    
 }
 
 extension ListViewController: UITableViewDataSource{
@@ -42,8 +40,6 @@ extension ListViewController: UITableViewDataSource{
         let dCell = self.tvDevices.dequeueReusableCell(withIdentifier: "cellBT") as! CellBT
         return dCell
     }
-    
-    
 }
 
 extension ListViewController: UITableViewDelegate{

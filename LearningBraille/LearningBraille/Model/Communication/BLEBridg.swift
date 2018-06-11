@@ -20,25 +20,28 @@ class BLEBridg{
 
         var count = 0
         
+        var message = ""
+        
         for i in 0 ... 4{
             let isIndexValid = word.words.indices.contains(i)
             
             for ib in 1...2{
                 if(isIndexValid){
                     if (ib == 1){
-                       let type = typeOf(halfLetter: [word.words[i][0], word.words[i][1], word.words[i][2]])
-                        print(chars[count], type)
+                        let type = typeOf(halfLetter: [word.words[i][0], word.words[i][1], word.words[i][2]])
+                        message = message + type
                     }else{
-                       let type = typeOf(halfLetter: [word.words[i][3], word.words[i][4], word.words[i][5]])
-                        print(chars[count], type)
+                        let type = typeOf(halfLetter: [word.words[i][3], word.words[i][4], word.words[i][5]])
+                        message = message + type
                     }
                 }else{
                     let type = typeOf(halfLetter: [false, false, false])
-                    print(chars[count], type)
+                    message = message + type
                 }
                 count = count + 1
             }
         }
+        BLEConnector.shared.send(value: message)
     }
     
     private func typeOf(halfLetter: [Bool]) -> String{

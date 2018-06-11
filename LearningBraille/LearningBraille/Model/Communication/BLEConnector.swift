@@ -9,18 +9,27 @@
 import Foundation
 import CoreBluetooth
 
+protocol BLEUpdate {
+    func update()
+}
+
 class BLEConnector: NSObject{
     
     static let shared = BLEConnector()
+    
+    var delegate: BLEUpdate?
     
     var centralManager: CBCentralManager!
     var myBluetoothPeripheral : CBPeripheral!
     var peripherals: [CBPeripheral]!{
         didSet{
             print("TO DO DELEGATE TO UPDATE")
+            if let up = delegate{
+                up.update()
+            }
         }
     }
-  
+    
     private var characterist: CBCharacteristic?
     private(set) var isReady: Bool = false
     
@@ -78,19 +87,29 @@ extension BLEConnector: CBCentralManagerDelegate{
         
     }
     
-    func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
-        peripherals.append(peripheral)
-        
-        if let name = peripheral.name{
-            print(name)
-            if(name == "braille"){
+    func conectDeviceWith(_ name: String){
+        for peripheral in self.peripherals{
+            if(peripheral.name == name){
                 self.myBluetoothPeripheral = peripheral
-                central.stopScan()                          //stop scanning for peripherals
-                central.connect(myBluetoothPeripheral, options: nil) //connect to my peripheral
-                
+                centralManager.stopScan()
+                centralManager.connect(myBluetoothPeripheral, options: nil) //connect to my peripheral
             }
         }
+    }
     
+    func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
+        
+        
+        if let name = peripheral.name{
+            peripherals.append(peripheral)
+            print(name)
+//            if(name == "braille"){
+//                self.myBluetoothPeripheral = peripheral
+//                central.stopScan()                          //stop scanning for peripherals
+//                central.connect(myBluetoothPeripheral, options: nil) //connect to my peripheral
+//
+//            }
+        }
     }
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
@@ -112,7 +131,7 @@ extension BLEConnector: CBPeripheralDelegate{
         
         for characterist in service.characteristics ?? []  {
             print( "sigla ", characterist.uuid.uuidString, " nome ",characterist.uuid)
-
+            
             if(characterist.uuid.uuidString == "FFE1"){
             
                 print(characterist.uuid.uuidString, "AQUI O BRAGDRATS")

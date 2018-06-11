@@ -57,6 +57,7 @@ class ResponseDelegate: NSObject, UICollectionViewDataSource, UICollectionViewDe
         
         return UIEdgeInsetsMake(0, leftInset, 0, rightInset)
     }
+
 }
 
 extension ResponseDelegate: UICollectionViewDelegate{

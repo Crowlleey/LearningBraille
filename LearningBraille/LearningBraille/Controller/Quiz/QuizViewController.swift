@@ -30,7 +30,6 @@ class QuizViewController: UIViewController{
     var cvResponseDelegate: ResponseDelegate!
     var randomIndex: Int!
     
-    
     var atualize: Atualize!
     var atualizeWrong: Atualize!
     var atualizeResponse: Atualize!
@@ -59,7 +58,26 @@ class QuizViewController: UIViewController{
         self.atualizeIndex = cvResponseDelegate
         
         self.cvCorrectWord.backgroundColor = .gray
+        
+//        yourCollectionView.contentInset = UIEdgeInsets(top: 0, left: yourCollectionView.width/2, bottom: 0, right: 0)
+//        self.cvCorrectWord.contentInset = UIEdgeInsets(top: 0, left: self.cvCorrectWord.frame.width/1.7, bottom: 0, right: 0)
+//        self.cvWrongWord.contentInset = UIEdgeInsets(top: 0, left: self.cvWrongWord.frame.width/1.7, bottom: 0, right: 0)
+//        self.cvResponse.contentInset = UIEdgeInsets(top: 0, left: self.cvResponse.frame.width/1.7, bottom: 0, right: 0)
+        let iii = self.cvCorrectWord.frame.width/1.7
+        print(iii)
+//        self.cvCorrectWord.contentOffset = CGPoint(x: 500, y: 0)
+   
+        
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.cvCorrectWord.setContentOffset(CGPoint(x: (self.view.frame.width / 4) * -1 , y: 0), animated: true)
+        self.cvWrongWord.setContentOffset(CGPoint(x: (self.view.frame.width / 4) * -1 , y: 0), animated: true)
+        self.cvResponse.setContentOffset(CGPoint(x: (self.view.frame.width / 4) * -1 , y: 0), animated: true)
+    }
+
     
     @IBAction func btJump(_ sender: Any) {
         jumpWord()
@@ -110,6 +128,7 @@ extension QuizViewController: ResponseProtocol{
         
         vwFeedBack.frame = CGRect(x: viewPositionX, y: viewPositionY, width: frame.width / 1.5, height: frame.height / 2)
         vwFeedBack.update(correct: isValue)
+        print(isValue)
         
         vwFeedBack.alpha = 0
         blurEffectView.alpha = 0
@@ -120,6 +139,7 @@ extension QuizViewController: ResponseProtocol{
         })
 
         self.view.addSubview(blurEffectView)
+        
         self.view.addSubview(vwFeedBack)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             UIView.animate(withDuration: 0.5, animations: {
@@ -128,6 +148,7 @@ extension QuizViewController: ResponseProtocol{
                 self.jumpWord()
             })
         }
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             UIView.animate(withDuration: 0.5, animations: {
                 blurEffectView.removeFromSuperview()

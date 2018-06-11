@@ -44,12 +44,15 @@ class CorrectWordDelegate: NSObject, UICollectionViewDataSource, UICollectionVie
         let totalCellWidth = CellWidth * CellCount
         let CellSpacing: CGFloat = 1
         let totalSpacingWidth = CellSpacing * (CellCount - 1)
-        
+
         let leftInset = (collectionView.frame.width  - CGFloat(totalCellWidth + totalSpacingWidth)) / 2
         let rightInset = leftInset
-        
+
         return UIEdgeInsetsMake(0, leftInset, 0, rightInset)
     }
+    
+ 
+ 
 }
 
 extension CorrectWordDelegate: Atualize{

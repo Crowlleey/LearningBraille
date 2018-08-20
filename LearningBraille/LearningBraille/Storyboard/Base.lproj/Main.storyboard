@@ -539,10 +539,10 @@
             </objects>
             <point key="canvasLocation" x="2039" y="132"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="x9X-cH-epC">
             <objects>
-                <viewController id="jNz-iK-scr" sceneMemberID="viewController">
+                <viewController id="jNz-iK-scr" customClass="LoginViewController" customModule="LearningBraille" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UzU-bd-ps1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

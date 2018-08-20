@@ -38,6 +38,7 @@
 		5EDFF62C2060511E002FF36A /* StringBraille.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDFF62B2060511E002FF36A /* StringBraille.swift */; };
 		5EEDBEFD212B5F9B0037F7C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EEDBEFC212B5F9B0037F7C2 /* GoogleService-Info.plist */; };
 		5EEDBF01212B61B90037F7C2 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEDBF00212B61B90037F7C2 /* Auth.swift */; };
+		5EEDBF03212B8A200037F7C2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEDBF02212B8A200037F7C2 /* LoginViewController.swift */; };
 		7FC822C9692063768BBC1A87 /* Pods_LearningBrailleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC259ACD11245759BF83E0AC /* Pods_LearningBrailleUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +96,7 @@
 		5EDFF62B2060511E002FF36A /* StringBraille.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringBraille.swift; sourceTree = "<group>"; };
 		5EEDBEFC212B5F9B0037F7C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5EEDBF00212B61B90037F7C2 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		5EEDBF02212B8A200037F7C2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		819C239CFDE8EC0EC0C1D193 /* Pods-LearningBrailleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningBrailleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearningBrailleTests/Pods-LearningBrailleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8969040084077FF044EF339B /* Pods-LearningBrailleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningBrailleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearningBrailleTests/Pods-LearningBrailleTests.release.xcconfig"; sourceTree = "<group>"; };
 		8D91FBDE422A294819A8186F /* Pods-LearningBrailleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningBrailleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearningBrailleUITests/Pods-LearningBrailleUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				5E86156F20B8AD6900BE0B15 /* Quiz */,
+				5EEDBF02212B8A200037F7C2 /* LoginViewController.swift */,
 				5E4148DD2053754B001B1892 /* MainViewController.swift */,
 				5E9A440B20B36F0400E70E78 /* Cell.swift */,
 				5E965CA820B3B5CD00FB6EE9 /* ListViewController.swift */,
@@ -533,6 +536,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EEDBF03212B8A200037F7C2 /* LoginViewController.swift in Sources */,
 				5EDFF62620604AF8002FF36A /* String.swift in Sources */,
 				5E86156920B8655A00BE0B15 /* QuizViewController.swift in Sources */,
 				5E86156520B7D72700BE0B15 /* ReadTextController.swift in Sources */,

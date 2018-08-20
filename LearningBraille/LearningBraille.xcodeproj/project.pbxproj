@@ -182,7 +182,7 @@
 				5EDC50BE2078300D007AE8AB /* Com */,
 				5EDC50BB20782FE4007AE8AB /* Model */,
 				5EDC50BF2078302F007AE8AB /* Data */,
-				5EDC50BC20782FEB007AE8AB /* View */,
+				5EDC50BC20782FEB007AE8AB /* Storyboard */,
 				5EDC50BD20782FF1007AE8AB /* Controller */,
 				5E4148EA2053754B001B1892 /* Info.plist */,
 			);
@@ -250,13 +250,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		5EDC50BC20782FEB007AE8AB /* View */ = {
+		5EDC50BC20782FEB007AE8AB /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
 				5E4148DF2053754B001B1892 /* Main.storyboard */,
 				5E4148E72053754B001B1892 /* LaunchScreen.storyboard */,
 			);
-			path = View;
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		5EDC50BD20782FF1007AE8AB /* Controller */ = {

@@ -63,8 +63,7 @@ class QuizViewController: UIViewController{
 //        self.cvCorrectWord.contentInset = UIEdgeInsets(top: 0, left: self.cvCorrectWord.frame.width/1.7, bottom: 0, right: 0)
 //        self.cvWrongWord.contentInset = UIEdgeInsets(top: 0, left: self.cvWrongWord.frame.width/1.7, bottom: 0, right: 0)
 //        self.cvResponse.contentInset = UIEdgeInsets(top: 0, left: self.cvResponse.frame.width/1.7, bottom: 0, right: 0)
-        let iii = self.cvCorrectWord.frame.width/1.7
-        print(iii)
+
 //        self.cvCorrectWord.contentOffset = CGPoint(x: 500, y: 0)
    
         
@@ -73,9 +72,9 @@ class QuizViewController: UIViewController{
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        self.cvCorrectWord.setContentOffset(CGPoint(x: (self.view.frame.width / 4) * -1 , y: 0), animated: true)
-        self.cvWrongWord.setContentOffset(CGPoint(x: (self.view.frame.width / 4) * -1 , y: 0), animated: true)
-        self.cvResponse.setContentOffset(CGPoint(x: (self.view.frame.width / 4) * -1 , y: 0), animated: true)
+//        self.cvCorrectWord.setContentOffset(CGPoint(x: (self.view.frame.width / 4) * -1 , y: 0), animated: true)
+//        self.cvWrongWord.setContentOffset(CGPoint(x: (self.view.frame.width / 4) * -1 , y: 0), animated: true)
+//        self.cvResponse.setContentOffset(CGPoint(x: (self.view.frame.width / 4) * -1 , y: 0), animated: true)
     }
 
     

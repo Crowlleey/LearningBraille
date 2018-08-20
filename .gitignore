@@ -129,5 +129,10 @@ playground.xcworkspace
 # https://docs.fastlane.tools/best-practices/source-control/#source-control
 
 
+### Firebase ###
+.idea
+**/node_modules/*
+**/.firebaserc
+GoogleService-Info.plist
 
 # End of https://www.gitignore.io/api/swift,macos,cocoapods,objective-c

@@ -20,6 +20,8 @@ class CorrectWordCell: UICollectionViewCell {
     @IBOutlet weak var view6: UIView!
     
     func update(){
+        
+        self.layer.borderColor = UIColor.black.cgColor
         refresh()
         if(letter[0]){self.view1.backgroundColor = .black}
         if(letter[1]){self.view2.backgroundColor = .black}

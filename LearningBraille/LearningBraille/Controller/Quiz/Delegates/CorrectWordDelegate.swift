@@ -50,9 +50,7 @@ class CorrectWordDelegate: NSObject, UICollectionViewDataSource, UICollectionVie
 
         return UIEdgeInsetsMake(0, leftInset, 0, rightInset)
     }
-    
- 
- 
+
 }
 
 extension CorrectWordDelegate: Atualize{

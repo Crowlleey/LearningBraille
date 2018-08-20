@@ -37,6 +37,7 @@
 		5EDFF62A20604FEC002FF36A /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDFF62920604FEC002FF36A /* Protocols.swift */; };
 		5EDFF62C2060511E002FF36A /* StringBraille.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDFF62B2060511E002FF36A /* StringBraille.swift */; };
 		5EEDBEFD212B5F9B0037F7C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EEDBEFC212B5F9B0037F7C2 /* GoogleService-Info.plist */; };
+		5EEDBF01212B61B90037F7C2 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEDBF00212B61B90037F7C2 /* Auth.swift */; };
 		7FC822C9692063768BBC1A87 /* Pods_LearningBrailleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC259ACD11245759BF83E0AC /* Pods_LearningBrailleUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		5EDFF62920604FEC002FF36A /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		5EDFF62B2060511E002FF36A /* StringBraille.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringBraille.swift; sourceTree = "<group>"; };
 		5EEDBEFC212B5F9B0037F7C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5EEDBF00212B61B90037F7C2 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		819C239CFDE8EC0EC0C1D193 /* Pods-LearningBrailleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningBrailleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearningBrailleTests/Pods-LearningBrailleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8969040084077FF044EF339B /* Pods-LearningBrailleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningBrailleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearningBrailleTests/Pods-LearningBrailleTests.release.xcconfig"; sourceTree = "<group>"; };
 		8D91FBDE422A294819A8186F /* Pods-LearningBrailleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningBrailleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearningBrailleUITests/Pods-LearningBrailleUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 		5E4148DA2053754B001B1892 /* LearningBraille */ = {
 			isa = PBXGroup;
 			children = (
+				5EEDBEFF212B61950037F7C2 /* Network */,
 				5EDC50BE2078300D007AE8AB /* Com */,
 				5EDC50BB20782FE4007AE8AB /* Model */,
 				5EDC50BF2078302F007AE8AB /* Data */,
@@ -295,6 +298,14 @@
 				5E86156620B7DE7300BE0B15 /* Simbles.swift */,
 			);
 			path = Text;
+			sourceTree = "<group>";
+		};
+		5EEDBEFF212B61950037F7C2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5EEDBF00212B61B90037F7C2 /* Auth.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -537,6 +548,7 @@
 				5E9A440920B3670600E70E78 /* BLEConnector.swift in Sources */,
 				5E835E6A20BB589800E2A9F8 /* ResponseDelegate.swift in Sources */,
 				5E835E6C20BB864C00E2A9F8 /* FeedbackView.swift in Sources */,
+				5EEDBF01212B61B90037F7C2 /* Auth.swift in Sources */,
 				5E965CA920B3B5CD00FB6EE9 /* ListViewController.swift in Sources */,
 				5E86156E20B8AC1300BE0B15 /* CorrectWordDelegate.swift in Sources */,
 				5EA1DCCF2086972000A31BE3 /* ParseJSON.swift in Sources */,

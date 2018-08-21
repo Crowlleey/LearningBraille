@@ -31,6 +31,12 @@ class MainViewController: UIViewController{
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        performSegue(withIdentifier: "toLogin", sender: nil)
+    }
+    
     @IBAction func exercise(_ sender: Any) {
         performSegue(withIdentifier: "toGame", sender: nil)
     }

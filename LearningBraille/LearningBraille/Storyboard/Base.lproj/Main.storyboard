@@ -54,7 +54,7 @@
                     </navigationItem>
                     <connections>
                         <segue destination="Yg3-Is-bQd" kind="show" identifier="toGame" id="Qzi-yH-R2V"/>
-                        <segue destination="jNz-iK-scr" kind="presentation" id="xSk-kx-BOM"/>
+                        <segue destination="jNz-iK-scr" kind="presentation" identifier="toLogin" id="xSk-kx-BOM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

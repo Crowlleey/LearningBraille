@@ -572,6 +572,9 @@
                                 <state key="normal" title="forgot your password?">
                                     <color key="titleColor" red="1" green="0.25160612854034348" blue="0.14296543134011586" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="btForgotPassword:" destination="jNz-iK-scr" eventType="touchUpInside" id="lk8-LF-3Vx"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VPJ-Ib-u1w">
                                 <rect key="frame" x="20" y="423.66666666666669" width="335" height="90.000000000000057"/>
@@ -585,6 +588,9 @@
                                         <state key="normal" title="Sign In">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btSignIn:" destination="jNz-iK-scr" eventType="touchUpInside" id="Ic6-hC-BrC"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igm-mu-Wdb">
                                         <rect key="frame" x="0.0" y="50" width="335" height="40"/>
@@ -595,6 +601,9 @@
                                         <state key="normal" title="Create New Account">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btCreateAcc:" destination="jNz-iK-scr" eventType="touchUpInside" id="v3T-5I-xse"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -621,6 +630,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5un-r6-JWg"/>
                     </view>
+                    <connections>
+                        <outlet property="btForgotPassword" destination="eOG-G2-lC7" id="JbC-Kl-Cxk"/>
+                        <outlet property="tfEmail" destination="PkW-RJ-MRN" id="mp3-Sa-Qfx"/>
+                        <outlet property="tfPassword" destination="uiR-4p-ocb" id="HPV-xd-9Rz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A68-Ve-otD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

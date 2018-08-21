@@ -56,8 +56,7 @@ class QuizViewController: UIViewController{
         self.cvResponse.dataSource = cvResponseDelegate
         self.atualizeResponse = cvResponseDelegate
         self.atualizeIndex = cvResponseDelegate
-        
-        self.cvCorrectWord.backgroundColor = .gray
+
         
 //        yourCollectionView.contentInset = UIEdgeInsets(top: 0, left: yourCollectionView.width/2, bottom: 0, right: 0)
 //        self.cvCorrectWord.contentInset = UIEdgeInsets(top: 0, left: self.cvCorrectWord.frame.width/1.7, bottom: 0, right: 0)

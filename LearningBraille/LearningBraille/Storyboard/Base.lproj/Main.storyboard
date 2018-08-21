@@ -89,7 +89,7 @@
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Y8S-5m-zV9">
                                                 <rect key="frame" x="0.0" y="138.66666666666666" width="375" height="75"/>
-                                                <color key="backgroundColor" red="0.25968191959999998" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.67142053914523114" green="0.99607843137254903" blue="0.37619878904808263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="75" id="RHC-6G-3qZ"/>
                                                 </constraints>
@@ -204,7 +204,7 @@
                                                 </cells>
                                             </collectionView>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="0.42685327039999998" blue="0.1214717701" alpha="0.22653499119718309" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.38057227629436263" green="1" blue="0.2532137439578247" alpha="0.22653499119718309" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="Y8S-5m-zV9" firstAttribute="top" secondItem="5uS-Ks-Fkg" secondAttribute="bottom" priority="250" constant="20" id="5LL-T1-oJO"/>
                                             <constraint firstItem="5uS-Ks-Fkg" firstAttribute="leading" secondItem="vI5-Ws-BhY" secondAttribute="leading" constant="8" id="CXh-mu-bTP"/>
@@ -229,7 +229,7 @@
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CHC-mk-2fX">
                                                 <rect key="frame" x="0.0" y="138.33333333333331" width="375" height="75"/>
-                                                <color key="backgroundColor" red="0.25968191959999998" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="1" green="0.22840217902985904" blue="0.14373647592873839" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6Wz-d2-azf">
                                                     <size key="itemSize" width="59" height="83"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -347,7 +347,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.95140844579999995" green="0.2475437224" blue="0.1727328598" alpha="0.34121919014084506" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.95140844579999995" green="0.29653033331699247" blue="0.22867811508136837" alpha="0.34121919014084506" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="SLr-Rc-6RK" firstAttribute="leading" secondItem="Nso-g1-SbQ" secondAttribute="leading" constant="8" id="5Z5-Xr-2fX"/>
                                             <constraint firstAttribute="trailing" secondItem="Cqa-h8-8Bm" secondAttribute="trailing" constant="8" id="DxG-Ry-XtV"/>
@@ -372,7 +372,7 @@
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RKl-v0-bZo">
                                                 <rect key="frame" x="0.0" y="138" width="375" height="75"/>
-                                                <color key="backgroundColor" red="0.25968191959999998" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.46697300003645836" green="0.64925614451171754" blue="0.90847922369913403" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="75" id="jq9-AO-dtP"/>
                                                 </constraints>
@@ -409,7 +409,7 @@
                                                 </cells>
                                             </collectionView>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="0.20028174202782567" blue="0.34647292934271179" alpha="0.38828675176056338" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.87730030218760169" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="RKl-v0-bZo" firstAttribute="leading" secondItem="Aad-Uq-qvx" secondAttribute="leading" id="1H7-sh-w6c"/>
                                             <constraint firstAttribute="trailing" secondItem="RKl-v0-bZo" secondAttribute="trailing" id="8Uk-AR-YiN"/>
@@ -421,7 +421,7 @@
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMD-m5-IDQ">
                                         <rect key="frame" x="0.0" y="640" width="375" height="50"/>
-                                        <color key="backgroundColor" red="1" green="0.42685327039999998" blue="0.1214717701" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.63402773274315727" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="t74-TT-VyZ"/>
                                         </constraints>

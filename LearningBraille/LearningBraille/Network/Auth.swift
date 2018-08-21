@@ -28,5 +28,9 @@ class Authentication{
         Auth.auth().signIn(withEmail: email, password: password) { (res, err) in
             completion(res, err)
         }
+//
+//        Auth.auth().signIn(withEmail: "giorgines@gmail.com", password: "agoravai") { (res, err) in
+//            completion(res, err)
+//        }
     }
 }

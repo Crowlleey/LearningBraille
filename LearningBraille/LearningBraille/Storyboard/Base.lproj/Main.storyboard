@@ -634,9 +634,11 @@
                         <outlet property="btForgotPassword" destination="eOG-G2-lC7" id="JbC-Kl-Cxk"/>
                         <outlet property="tfEmail" destination="PkW-RJ-MRN" id="mp3-Sa-Qfx"/>
                         <outlet property="tfPassword" destination="uiR-4p-ocb" id="HPV-xd-9Rz"/>
+                        <segue destination="nHa-TS-PhT" kind="unwind" identifier="unwindToMain" unwindAction="unwindToMainWithSegue:" id="I7R-jg-AKa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A68-Ve-otD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="nHa-TS-PhT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1075.5" y="1298"/>
         </scene>

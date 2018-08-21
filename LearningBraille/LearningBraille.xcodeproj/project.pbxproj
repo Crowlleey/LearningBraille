@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10CF79F805B1FCEF07A9B834 /* Pods_LearningBrailleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D50325DD3327E8F2DC2DCEF /* Pods_LearningBrailleTests.framework */; };
+		1AE3F170FE9E1E40797DE436 /* Pods_LearningBraille.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E397CB1E7DA079118341924E /* Pods_LearningBraille.framework */; };
 		5E4148DC2053754B001B1892 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4148DB2053754B001B1892 /* AppDelegate.swift */; };
 		5E4148DE2053754B001B1892 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4148DD2053754B001B1892 /* MainViewController.swift */; };
 		5E4148E12053754B001B1892 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E4148DF2053754B001B1892 /* Main.storyboard */; };
@@ -34,6 +36,10 @@
 		5EDFF62620604AF8002FF36A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDFF62520604AF8002FF36A /* String.swift */; };
 		5EDFF62A20604FEC002FF36A /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDFF62920604FEC002FF36A /* Protocols.swift */; };
 		5EDFF62C2060511E002FF36A /* StringBraille.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDFF62B2060511E002FF36A /* StringBraille.swift */; };
+		5EEDBEFD212B5F9B0037F7C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EEDBEFC212B5F9B0037F7C2 /* GoogleService-Info.plist */; };
+		5EEDBF01212B61B90037F7C2 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEDBF00212B61B90037F7C2 /* Auth.swift */; };
+		5EEDBF03212B8A200037F7C2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEDBF02212B8A200037F7C2 /* LoginViewController.swift */; };
+		7FC822C9692063768BBC1A87 /* Pods_LearningBrailleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC259ACD11245759BF83E0AC /* Pods_LearningBrailleUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +60,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		141AFD60EE371CE6CA9DA33F /* Pods-LearningBraille.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningBraille.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearningBraille/Pods-LearningBraille.debug.xcconfig"; sourceTree = "<group>"; };
+		2D50325DD3327E8F2DC2DCEF /* Pods_LearningBrailleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearningBrailleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E4148D82053754B001B1892 /* LearningBraille.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningBraille.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E4148DB2053754B001B1892 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E4148DD2053754B001B1892 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +94,16 @@
 		5EDFF62520604AF8002FF36A /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		5EDFF62920604FEC002FF36A /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		5EDFF62B2060511E002FF36A /* StringBraille.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringBraille.swift; sourceTree = "<group>"; };
+		5EEDBEFC212B5F9B0037F7C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5EEDBF00212B61B90037F7C2 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		5EEDBF02212B8A200037F7C2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		819C239CFDE8EC0EC0C1D193 /* Pods-LearningBrailleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningBrailleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearningBrailleTests/Pods-LearningBrailleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8969040084077FF044EF339B /* Pods-LearningBrailleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningBrailleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearningBrailleTests/Pods-LearningBrailleTests.release.xcconfig"; sourceTree = "<group>"; };
+		8D91FBDE422A294819A8186F /* Pods-LearningBrailleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningBrailleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearningBrailleUITests/Pods-LearningBrailleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BC259ACD11245759BF83E0AC /* Pods_LearningBrailleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearningBrailleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E397CB1E7DA079118341924E /* Pods_LearningBraille.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearningBraille.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E777C98B01596978004C362E /* Pods-LearningBraille.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningBraille.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearningBraille/Pods-LearningBraille.release.xcconfig"; sourceTree = "<group>"; };
+		F07547A43D35259B4A815D93 /* Pods-LearningBrailleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningBrailleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearningBrailleUITests/Pods-LearningBrailleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AE3F170FE9E1E40797DE436 /* Pods_LearningBraille.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10CF79F805B1FCEF07A9B834 /* Pods_LearningBrailleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,17 +127,43 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FC822C9692063768BBC1A87 /* Pods_LearningBrailleUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AFC952D4554A83D517A933F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				141AFD60EE371CE6CA9DA33F /* Pods-LearningBraille.debug.xcconfig */,
+				E777C98B01596978004C362E /* Pods-LearningBraille.release.xcconfig */,
+				819C239CFDE8EC0EC0C1D193 /* Pods-LearningBrailleTests.debug.xcconfig */,
+				8969040084077FF044EF339B /* Pods-LearningBrailleTests.release.xcconfig */,
+				F07547A43D35259B4A815D93 /* Pods-LearningBrailleUITests.debug.xcconfig */,
+				8D91FBDE422A294819A8186F /* Pods-LearningBrailleUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		45BE06B2A7C8F465E7B03097 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E397CB1E7DA079118341924E /* Pods_LearningBraille.framework */,
+				2D50325DD3327E8F2DC2DCEF /* Pods_LearningBrailleTests.framework */,
+				BC259ACD11245759BF83E0AC /* Pods_LearningBrailleUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5E4148CF2053754B001B1892 = {
 			isa = PBXGroup;
 			children = (
 				5E4148DA2053754B001B1892 /* LearningBraille */,
 				5E4148D92053754B001B1892 /* Products */,
+				0AFC952D4554A83D517A933F /* Pods */,
+				45BE06B2A7C8F465E7B03097 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,10 +180,11 @@
 		5E4148DA2053754B001B1892 /* LearningBraille */ = {
 			isa = PBXGroup;
 			children = (
+				5EEDBEFF212B61950037F7C2 /* Network */,
 				5EDC50BE2078300D007AE8AB /* Com */,
 				5EDC50BB20782FE4007AE8AB /* Model */,
 				5EDC50BF2078302F007AE8AB /* Data */,
-				5EDC50BC20782FEB007AE8AB /* View */,
+				5EDC50BC20782FEB007AE8AB /* Storyboard */,
 				5EDC50BD20782FF1007AE8AB /* Controller */,
 				5E4148EA2053754B001B1892 /* Info.plist */,
 			);
@@ -205,19 +252,20 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		5EDC50BC20782FEB007AE8AB /* View */ = {
+		5EDC50BC20782FEB007AE8AB /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
 				5E4148DF2053754B001B1892 /* Main.storyboard */,
 				5E4148E72053754B001B1892 /* LaunchScreen.storyboard */,
 			);
-			path = View;
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		5EDC50BD20782FF1007AE8AB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				5E86156F20B8AD6900BE0B15 /* Quiz */,
+				5EEDBF02212B8A200037F7C2 /* LoginViewController.swift */,
 				5E4148DD2053754B001B1892 /* MainViewController.swift */,
 				5E9A440B20B36F0400E70E78 /* Cell.swift */,
 				5E965CA820B3B5CD00FB6EE9 /* ListViewController.swift */,
@@ -229,6 +277,7 @@
 		5EDC50BE2078300D007AE8AB /* Com */ = {
 			isa = PBXGroup;
 			children = (
+				5EEDBEFC212B5F9B0037F7C2 /* GoogleService-Info.plist */,
 				5E4148DB2053754B001B1892 /* AppDelegate.swift */,
 				5E835E6D20BC411D00E2A9F8 /* Assets.xcassets */,
 			);
@@ -254,6 +303,14 @@
 			path = Text;
 			sourceTree = "<group>";
 		};
+		5EEDBEFF212B61950037F7C2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5EEDBF00212B61B90037F7C2 /* Auth.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -261,9 +318,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5E4149032053754C001B1892 /* Build configuration list for PBXNativeTarget "LearningBraille" */;
 			buildPhases = (
+				541A61A46F1B417647254D3E /* [CP] Check Pods Manifest.lock */,
 				5E4148D42053754B001B1892 /* Sources */,
 				5E4148D52053754B001B1892 /* Frameworks */,
 				5E4148D62053754B001B1892 /* Resources */,
+				713961220090714758DFBF0F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -278,6 +337,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5E4149062053754C001B1892 /* Build configuration list for PBXNativeTarget "LearningBrailleTests" */;
 			buildPhases = (
+				FA8F70DB02D68B47F52FBAF4 /* [CP] Check Pods Manifest.lock */,
 				5E4148EB2053754C001B1892 /* Sources */,
 				5E4148EC2053754C001B1892 /* Frameworks */,
 				5E4148ED2053754C001B1892 /* Resources */,
@@ -296,6 +356,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5E4149092053754C001B1892 /* Build configuration list for PBXNativeTarget "LearningBrailleUITests" */;
 			buildPhases = (
+				04D5190B9B57095BE96F006B /* [CP] Check Pods Manifest.lock */,
 				5E4148F62053754C001B1892 /* Sources */,
 				5E4148F72053754C001B1892 /* Frameworks */,
 				5E4148F82053754C001B1892 /* Resources */,
@@ -363,6 +424,7 @@
 			files = (
 				5E835E6620BA6B9A00E2A9F8 /* wordsReserva.json in Resources */,
 				5E86156B20B8666D00BE0B15 /* Words5Letters.json in Resources */,
+				5EEDBEFD212B5F9B0037F7C2 /* GoogleService-Info.plist in Resources */,
 				5E4148E92053754B001B1892 /* LaunchScreen.storyboard in Resources */,
 				5E4148E12053754B001B1892 /* Main.storyboard in Resources */,
 				5EA1DCCD208696D500A31BE3 /* Letters.json in Resources */,
@@ -388,11 +450,93 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04D5190B9B57095BE96F006B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LearningBrailleUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		541A61A46F1B417647254D3E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LearningBraille-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		713961220090714758DFBF0F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LearningBraille/Pods-LearningBraille-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LearningBraille/Pods-LearningBraille-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA8F70DB02D68B47F52FBAF4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LearningBrailleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5E4148D42053754B001B1892 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EEDBF03212B8A200037F7C2 /* LoginViewController.swift in Sources */,
 				5EDFF62620604AF8002FF36A /* String.swift in Sources */,
 				5E86156920B8655A00BE0B15 /* QuizViewController.swift in Sources */,
 				5E86156520B7D72700BE0B15 /* ReadTextController.swift in Sources */,
@@ -408,6 +552,7 @@
 				5E9A440920B3670600E70E78 /* BLEConnector.swift in Sources */,
 				5E835E6A20BB589800E2A9F8 /* ResponseDelegate.swift in Sources */,
 				5E835E6C20BB864C00E2A9F8 /* FeedbackView.swift in Sources */,
+				5EEDBF01212B61B90037F7C2 /* Auth.swift in Sources */,
 				5E965CA920B3B5CD00FB6EE9 /* ListViewController.swift in Sources */,
 				5E86156E20B8AC1300BE0B15 /* CorrectWordDelegate.swift in Sources */,
 				5EA1DCCF2086972000A31BE3 /* ParseJSON.swift in Sources */,
@@ -578,6 +723,7 @@
 		};
 		5E4149042053754C001B1892 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 141AFD60EE371CE6CA9DA33F /* Pods-LearningBraille.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -593,6 +739,7 @@
 		};
 		5E4149052053754C001B1892 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E777C98B01596978004C362E /* Pods-LearningBraille.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -608,6 +755,7 @@
 		};
 		5E4149072053754C001B1892 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 819C239CFDE8EC0EC0C1D193 /* Pods-LearningBrailleTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -625,6 +773,7 @@
 		};
 		5E4149082053754C001B1892 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8969040084077FF044EF339B /* Pods-LearningBrailleTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -642,6 +791,7 @@
 		};
 		5E41490A2053754C001B1892 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F07547A43D35259B4A815D93 /* Pods-LearningBrailleUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -658,6 +808,7 @@
 		};
 		5E41490B2053754C001B1892 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D91FBDE422A294819A8186F /* Pods-LearningBrailleUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

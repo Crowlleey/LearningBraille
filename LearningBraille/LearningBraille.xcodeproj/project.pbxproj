@@ -182,6 +182,14 @@
 			path = BLEConnection;
 			sourceTree = "<group>";
 		};
+		5E1B77CE212F911400F33170 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				5EEDBF00212B61B90037F7C2 /* Auth.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
 		5E4148CF2053754B001B1892 = {
 			isa = PBXGroup;
 			children = (
@@ -244,13 +252,13 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		5E9A440A20B3671000E70E78 /* Communication */ = {
+		5E9A440A20B3671000E70E78 /* BLECommunication */ = {
 			isa = PBXGroup;
 			children = (
 				5E9A440820B3670600E70E78 /* BLEConnector.swift */,
 				5E835E6320BA609400E2A9F8 /* BLEBridg.swift */,
 			);
-			path = Communication;
+			path = BLECommunication;
 			sourceTree = "<group>";
 		};
 		5EA1DCD02086972B00A31BE3 /* LettersJson */ = {
@@ -272,7 +280,6 @@
 				5E835E6B20BB864C00E2A9F8 /* FeedbackView.swift */,
 				5EA1DCD02086972B00A31BE3 /* LettersJson */,
 				5EDC50C02078303E007AE8AB /* Text */,
-				5E9A440A20B3671000E70E78 /* Communication */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -333,7 +340,8 @@
 		5EEDBEFF212B61950037F7C2 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				5EEDBF00212B61B90037F7C2 /* Auth.swift */,
+				5E1B77CE212F911400F33170 /* Firebase */,
+				5E9A440A20B3671000E70E78 /* BLECommunication */,
 			);
 			path = Network;
 			sourceTree = "<group>";

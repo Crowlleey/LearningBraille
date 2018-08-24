@@ -159,6 +159,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5E1B77CB212F8FF100F33170 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5EEDBF02212B8A200037F7C2 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		5E1B77CC212F901600F33170 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5E1B77CD212F903400F33170 /* BLEConnection */ = {
+			isa = PBXGroup;
+			children = (
+				5E965CA820B3B5CD00FB6EE9 /* ListViewController.swift */,
+			);
+			path = BLEConnection;
+			sourceTree = "<group>";
+		};
 		5E4148CF2053754B001B1892 = {
 			isa = PBXGroup;
 			children = (
@@ -187,7 +210,7 @@
 				5EDC50BB20782FE4007AE8AB /* Model */,
 				5EDC50BF2078302F007AE8AB /* Persistence */,
 				5EDC50BC20782FEB007AE8AB /* Storyboard */,
-				5EDC50BD20782FF1007AE8AB /* Controller */,
+				5EDC50BD20782FF1007AE8AB /* APP */,
 				5E4148EA2053754B001B1892 /* Info.plist */,
 			);
 			path = LearningBraille;
@@ -263,17 +286,18 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		5EDC50BD20782FF1007AE8AB /* Controller */ = {
+		5EDC50BD20782FF1007AE8AB /* APP */ = {
 			isa = PBXGroup;
 			children = (
+				5E1B77CD212F903400F33170 /* BLEConnection */,
+				5E1B77CB212F8FF100F33170 /* Login */,
+				5E1B77CC212F901600F33170 /* Main */,
 				5E86156F20B8AD6900BE0B15 /* Quiz */,
-				5EEDBF02212B8A200037F7C2 /* LoginViewController.swift */,
 				5E4148DD2053754B001B1892 /* MainViewController.swift */,
 				5E9A440B20B36F0400E70E78 /* Cell.swift */,
-				5E965CA820B3B5CD00FB6EE9 /* ListViewController.swift */,
 				5E86156420B7D72700BE0B15 /* ReadTextController.swift */,
 			);
-			path = Controller;
+			path = APP;
 			sourceTree = "<group>";
 		};
 		5EDC50BE2078300D007AE8AB /* Com */ = {

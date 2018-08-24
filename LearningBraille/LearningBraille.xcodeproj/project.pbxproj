@@ -225,8 +225,8 @@
 			isa = PBXGroup;
 			children = (
 				5EDC50BE2078300D007AE8AB /* Com */,
-				5EEDBEFF212B61950037F7C2 /* Network */,
 				5EDC50BB20782FE4007AE8AB /* Model */,
+				5EEDBEFF212B61950037F7C2 /* Network */,
 				5EDC50BF2078302F007AE8AB /* Persistence */,
 				5EDC50BC20782FEB007AE8AB /* Storyboard */,
 				5EDC50BD20782FF1007AE8AB /* APP */,
@@ -551,6 +551,8 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-LearningBraille/Pods-LearningBraille-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -558,6 +560,8 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);

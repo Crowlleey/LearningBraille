@@ -10,6 +10,8 @@ target 'LearningBraille' do
 	pod 'Firebase/Database'
 	pod 'Firebase/Auth'
 	pod 'Firebase/Storage'
+	pod 'RxSwift',    '~> 4.0'
+    	pod 'RxCocoa',    '~> 4.0'
 
   target 'LearningBrailleTests' do
     inherit! :search_paths

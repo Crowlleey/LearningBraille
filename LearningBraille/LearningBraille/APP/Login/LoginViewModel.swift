@@ -10,11 +10,11 @@ import Foundation
 
 struct LoginViewModel {
     
-    var email: String!
-    var password: String!
+    let email = Variable<String>("Start With Value 2")
+    let password = Variable<String>("")
     
     func login(){
-        print(email!, " email + senha ", password!)
+        print(email.value, " email + senha ", password.value)
     }
     
 }

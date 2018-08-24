@@ -9,7 +9,7 @@
 import Foundation
 
 class Variable<T> {
-    
+   
     typealias Listener = (T) -> Void
     var listener: Listener?
     

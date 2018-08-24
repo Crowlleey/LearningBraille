@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 enum AlertType: String{
     case sucess = "Sucess"
@@ -19,13 +20,13 @@ class LoginViewController: UIViewController{
     
     @IBOutlet weak var tfEmail: BindingTextField! {
         didSet{
-            tfEmail.bind{ self.loginViewModel.email = $0 }
+            tfEmail.bind{ self.loginViewModel.email.value = $0 }
         }
     }
     
     @IBOutlet weak var tfPassword: BindingTextField! {
         didSet{
-            tfPassword.bind{ self.loginViewModel.password = $0 }
+            tfPassword.bind{ self.loginViewModel.password.value = $0 }
         }
     }
     
@@ -43,16 +44,20 @@ class LoginViewController: UIViewController{
         }
     }
     
+    var text: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loginViewModel = LoginViewModel()
+
+        self.loginViewModel.email.bind{ self.text = $0 }
         
         self.btForgotPassword.setTitle("", for: .normal)
         self.hideKeyboard()
     }
     
     @IBAction func btForgotPassword(_ sender: Any) {
-    
+        print(self.text)
     }
     
     @IBAction func btSignIn(_ sender: Any) {
@@ -78,6 +83,9 @@ class LoginViewController: UIViewController{
 //        }
     }
     
+    var i: AuthDataResult!
+    var errrr: Error!
+
     @IBAction func btCreateAcc(_ sender: Any) {
         auth.createUser(with: self.tfEmail.text!, self.tfPassword.text!) { (res, err) in
             if (err == nil) {

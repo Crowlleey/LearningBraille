@@ -58,7 +58,6 @@ class LoginViewController: UIViewController{
                 })
             }
         }
-        
     }
     
     @IBAction func btCreateAcc(_ sender: Any) {

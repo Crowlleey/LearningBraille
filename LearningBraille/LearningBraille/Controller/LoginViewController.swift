@@ -89,11 +89,9 @@ class LoginViewController: UIViewController{
         }))
          self.present(alert, animated: true, completion: nil)
     }
-    
-    
 }
 
-extension LoginViewController{
+extension LoginViewController {
     func hideKeyboard() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
     

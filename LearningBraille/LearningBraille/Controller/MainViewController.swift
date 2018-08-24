@@ -35,7 +35,7 @@ class MainViewController: UIViewController{
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if self.firstTime{
-//            performSegue(withIdentifier: "toLogin", sender: nil)
+            performSegue(withIdentifier: "toLogin", sender: nil)
         }
     }
     

@@ -20,7 +20,7 @@ enum RequestType: String{
 private let cDInstance = CoreDataManager()
 
 protocol CDManagerProtocol{
-    func saveThis<T: NSManagedObject>(_ obj: T,_ managedType: ManagedType, completionHandler: @escaping(Error?) -> Void)
+    func saveThis<T: NSManagedObject>(_ obj: T, completionHandler: @escaping(Error?) -> Void)
 }
 
 class CoreDataManager: CDManagerProtocol{
@@ -29,7 +29,7 @@ class CoreDataManager: CDManagerProtocol{
         return cDInstance
     }
     
-    func saveThis<T: NSManagedObject>(_ obj: T,_ managedType: ManagedType, completionHandler: @escaping(Error?) -> Void){
+    func saveThis<T: NSManagedObject>(_ obj: T, completionHandler: @escaping(Error?) -> Void){
         
         let context = getContext()
         

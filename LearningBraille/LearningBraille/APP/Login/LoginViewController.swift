@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 import Firebase
 
 enum AlertType: String{
@@ -56,24 +57,6 @@ class LoginViewController: UIViewController{
     @IBAction func btSignIn(_ sender: Any) {
         attempts = attempts + 1
         
-        self.loginViewModel.login()
-//        auth.login(with: self.tfEmail.text!, self.tfPassword.text!) { (res, err) in
-//            if (err == nil) {
-//                self.createAllert(with: .sucess, message: "Welcome", action: {
-//                    let user: User = CoreDataManager.managerInstance().Object()
-//                    user.name = res?.user.email
-//                    user.email = res?.user.email
-//                    user.token = res?.user.uid
-//                    CoreDataManager.managerInstance().saveThis(user, completionHandler: { (err) in
-//                        print(err ?? "Nao tem err")
-//                    })
-//                    self.performSegue(withIdentifier: "unwindToMain", sender: nil)
-//                })
-//            }else{
-//                let message = err.debugDescription.translateFBError()
-//                self.createAllert(with: .fail, message: message!, action: nil)
-//            }
-//        }
     }
     
     var i: AuthDataResult!
@@ -96,7 +79,8 @@ class LoginViewController: UIViewController{
     }
     
     func setupBindings(){
-        
+        _ = self.tfEmail.rx.text.map{ $0 ?? "" }.bind(to: self.loginViewModel.email)
+        _ = self.tfPassword.rx.text.map{ $0 ?? "" }.bind(to: self.loginViewModel.password)
     }
     
     func createAllert(with type:AlertType,  message: String, action: (()-> Void)?) {

@@ -10,4 +10,11 @@ import Foundation
 
 struct LoginViewModel {
     
+    var email: String!
+    var password: String!
+    
+    func login(){
+        print(email!, " email + senha ", password!)
+    }
+    
 }

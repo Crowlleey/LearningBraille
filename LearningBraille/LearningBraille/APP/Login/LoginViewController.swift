@@ -15,8 +15,20 @@ enum AlertType: String{
 
 class LoginViewController: UIViewController{
     
-    @IBOutlet weak var tfEmail: UITextField!
-    @IBOutlet weak var tfPassword: UITextField!
+    private var loginViewModel: LoginViewModel!
+    
+    @IBOutlet weak var tfEmail: BindingTextField! {
+        didSet{
+            tfEmail.bind{ self.loginViewModel.email = $0 }
+        }
+    }
+    
+    @IBOutlet weak var tfPassword: BindingTextField! {
+        didSet{
+            tfPassword.bind{ self.loginViewModel.password = $0 }
+        }
+    }
+    
     @IBOutlet weak var btForgotPassword: UIButton!
     
     private let auth: Authentication = {
@@ -33,6 +45,7 @@ class LoginViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.loginViewModel = LoginViewModel()
         
         self.btForgotPassword.setTitle("", for: .normal)
         self.hideKeyboard()
@@ -45,23 +58,24 @@ class LoginViewController: UIViewController{
     @IBAction func btSignIn(_ sender: Any) {
         attempts = attempts + 1
         
-        auth.login(with: self.tfEmail.text!, self.tfPassword.text!) { (res, err) in
-            if (err == nil) {
-                self.createAllert(with: .sucess, message: "Welcome", action: {
-                    let user: User = CoreDataManager.managerInstance().Object()
-                    user.name = res?.user.email
-                    user.email = res?.user.email
-                    user.token = res?.user.uid
-                    CoreDataManager.managerInstance().saveThis(user, completionHandler: { (err) in
-                        print(err ?? "Nao tem err")
-                    })
-                    self.performSegue(withIdentifier: "unwindToMain", sender: nil)
-                })
-            }else{
-                let message = err.debugDescription.translateFBError()
-                self.createAllert(with: .fail, message: message!, action: nil)
-            }
-        }
+        self.loginViewModel.login()
+//        auth.login(with: self.tfEmail.text!, self.tfPassword.text!) { (res, err) in
+//            if (err == nil) {
+//                self.createAllert(with: .sucess, message: "Welcome", action: {
+//                    let user: User = CoreDataManager.managerInstance().Object()
+//                    user.name = res?.user.email
+//                    user.email = res?.user.email
+//                    user.token = res?.user.uid
+//                    CoreDataManager.managerInstance().saveThis(user, completionHandler: { (err) in
+//                        print(err ?? "Nao tem err")
+//                    })
+//                    self.performSegue(withIdentifier: "unwindToMain", sender: nil)
+//                })
+//            }else{
+//                let message = err.debugDescription.translateFBError()
+//                self.createAllert(with: .fail, message: message!, action: nil)
+//            }
+//        }
     }
     
     @IBAction func btCreateAcc(_ sender: Any) {

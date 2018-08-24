@@ -11,6 +11,8 @@
 		1AE3F170FE9E1E40797DE436 /* Pods_LearningBraille.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E397CB1E7DA079118341924E /* Pods_LearningBraille.framework */; };
 		5E1B77CA212F845100F33170 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1B77C9212F845100F33170 /* CoreDataManager.swift */; };
 		5E1B77D0212F919E00F33170 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1B77CF212F919E00F33170 /* LoginViewModel.swift */; };
+		5E1B77D6212F9AA600F33170 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1B77D5212F9AA600F33170 /* MainViewModel.swift */; };
+		5E1B77D8212FAFCE00F33170 /* BindingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1B77D7212FAFCE00F33170 /* BindingTextField.swift */; };
 		5E4148DC2053754B001B1892 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4148DB2053754B001B1892 /* AppDelegate.swift */; };
 		5E4148DE2053754B001B1892 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4148DD2053754B001B1892 /* MainViewController.swift */; };
 		5E4148E12053754B001B1892 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E4148DF2053754B001B1892 /* Main.storyboard */; };
@@ -66,6 +68,8 @@
 		2D50325DD3327E8F2DC2DCEF /* Pods_LearningBrailleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearningBrailleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E1B77C9212F845100F33170 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		5E1B77CF212F919E00F33170 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		5E1B77D5212F9AA600F33170 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		5E1B77D7212FAFCE00F33170 /* BindingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingTextField.swift; sourceTree = "<group>"; };
 		5E4148D82053754B001B1892 /* LearningBraille.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningBraille.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E4148DB2053754B001B1892 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E4148DD2053754B001B1892 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -164,8 +168,9 @@
 		5E1B77CB212F8FF100F33170 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				5EEDBF02212B8A200037F7C2 /* LoginViewController.swift */,
+				5E1B77D7212FAFCE00F33170 /* BindingTextField.swift */,
 				5E1B77CF212F919E00F33170 /* LoginViewModel.swift */,
+				5EEDBF02212B8A200037F7C2 /* LoginViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -173,6 +178,8 @@
 		5E1B77CC212F901600F33170 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				5E4148DD2053754B001B1892 /* MainViewController.swift */,
+				5E1B77D5212F9AA600F33170 /* MainViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -216,8 +223,8 @@
 		5E4148DA2053754B001B1892 /* LearningBraille */ = {
 			isa = PBXGroup;
 			children = (
-				5EEDBEFF212B61950037F7C2 /* Network */,
 				5EDC50BE2078300D007AE8AB /* Com */,
+				5EEDBEFF212B61950037F7C2 /* Network */,
 				5EDC50BB20782FE4007AE8AB /* Model */,
 				5EDC50BF2078302F007AE8AB /* Persistence */,
 				5EDC50BC20782FEB007AE8AB /* Storyboard */,
@@ -303,7 +310,6 @@
 				5E1B77CB212F8FF100F33170 /* Login */,
 				5E1B77CC212F901600F33170 /* Main */,
 				5E86156F20B8AD6900BE0B15 /* Quiz */,
-				5E4148DD2053754B001B1892 /* MainViewController.swift */,
 				5E9A440B20B36F0400E70E78 /* Cell.swift */,
 				5E86156420B7D72700BE0B15 /* ReadTextController.swift */,
 			);
@@ -578,6 +584,7 @@
 				5EEDBF03212B8A200037F7C2 /* LoginViewController.swift in Sources */,
 				5EDFF62620604AF8002FF36A /* String.swift in Sources */,
 				5E86156920B8655A00BE0B15 /* QuizViewController.swift in Sources */,
+				5E1B77D8212FAFCE00F33170 /* BindingTextField.swift in Sources */,
 				5E86156520B7D72700BE0B15 /* ReadTextController.swift in Sources */,
 				5EDFF62A20604FEC002FF36A /* Protocols.swift in Sources */,
 				5E835E6820BB582E00E2A9F8 /* ResponseCell.swift in Sources */,
@@ -597,6 +604,7 @@
 				5E86156E20B8AC1300BE0B15 /* CorrectWordDelegate.swift in Sources */,
 				5EA1DCCF2086972000A31BE3 /* ParseJSON.swift in Sources */,
 				5E86156720B7DE7300BE0B15 /* Simbles.swift in Sources */,
+				5E1B77D6212F9AA600F33170 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

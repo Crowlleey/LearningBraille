@@ -48,14 +48,18 @@ class LoginViewController: UIViewController{
         auth.login(with: self.tfEmail.text!, self.tfPassword.text!) { (res, err) in
             if (err == nil) {
                 self.createAllert(with: .sucess, message: "Welcome", action: {
-                    self.navigationController?.popViewController(animated: true)
+                    let user: User = CoreDataManager.managerInstance().Object()
+                    user.name = res?.user.email
+                    user.email = res?.user.email
+                    user.token = res?.user.uid
+                    CoreDataManager.managerInstance().saveThis(user, completionHandler: { (err) in
+                        print(err ?? "Nao tem err")
+                    })
+                    self.performSegue(withIdentifier: "unwindToMain", sender: nil)
                 })
             }else{
                 let message = err.debugDescription.translateFBError()
-                self.createAllert(with: .fail, message: message!, action: {
-//                    self.tfEmail.text = ""
-//                    self.tfPassword.text = ""
-                })
+                self.createAllert(with: .fail, message: message!, action: nil)
             }
         }
     }
@@ -76,10 +80,12 @@ class LoginViewController: UIViewController{
         }
     }
     
-    func createAllert(with type:AlertType,  message: String, action: @escaping ()-> Void) {
+    func createAllert(with type:AlertType,  message: String, action: (()-> Void)?) {
         let alert = UIAlertController(title: type.rawValue, message: message, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (aler) in
-            action()
+            if let act = action{
+                act()
+            }
         }))
          self.present(alert, animated: true, completion: nil)
     }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 import Firebase
 
 enum AlertType: String{
@@ -17,18 +18,10 @@ enum AlertType: String{
 class LoginViewController: UIViewController{
     
     private var loginViewModel: LoginViewModel!
+    private let disposeBag = DisposeBag()
     
-    @IBOutlet weak var tfEmail: BindingTextField! {
-        didSet{
-            tfEmail.bind{ self.loginViewModel.email.value = $0 }
-        }
-    }
-    
-    @IBOutlet weak var tfPassword: BindingTextField! {
-        didSet{
-            tfPassword.bind{ self.loginViewModel.password.value = $0 }
-        }
-    }
+    @IBOutlet weak var tfEmail: UITextField!
+    @IBOutlet weak var tfPassword: UITextField!
     
     @IBOutlet weak var btForgotPassword: UIButton!
     
@@ -50,10 +43,10 @@ class LoginViewController: UIViewController{
         super.viewDidLoad()
         self.loginViewModel = LoginViewModel()
 
-        self.loginViewModel.email.bind{ self.text = $0 }
-        
         self.btForgotPassword.setTitle("", for: .normal)
         self.hideKeyboard()
+        
+        setupBindings()
     }
     
     @IBAction func btForgotPassword(_ sender: Any) {
@@ -100,6 +93,10 @@ class LoginViewController: UIViewController{
                 })
             }
         }
+    }
+    
+    func setupBindings(){
+        
     }
     
     func createAllert(with type:AlertType,  message: String, action: (()-> Void)?) {

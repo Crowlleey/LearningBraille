@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		10CF79F805B1FCEF07A9B834 /* Pods_LearningBrailleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D50325DD3327E8F2DC2DCEF /* Pods_LearningBrailleTests.framework */; };
 		1AE3F170FE9E1E40797DE436 /* Pods_LearningBraille.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E397CB1E7DA079118341924E /* Pods_LearningBraille.framework */; };
+		5E14EB0B2130FCD70098BA4D /* ListBLEViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E14EB0A2130FCD70098BA4D /* ListBLEViewModel.swift */; };
 		5E1B77CA212F845100F33170 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1B77C9212F845100F33170 /* CoreDataManager.swift */; };
 		5E1B77D0212F919E00F33170 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1B77CF212F919E00F33170 /* LoginViewModel.swift */; };
 		5E1B77D6212F9AA600F33170 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1B77D5212F9AA600F33170 /* MainViewModel.swift */; };
@@ -67,6 +68,7 @@
 /* Begin PBXFileReference section */
 		141AFD60EE371CE6CA9DA33F /* Pods-LearningBraille.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningBraille.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearningBraille/Pods-LearningBraille.debug.xcconfig"; sourceTree = "<group>"; };
 		2D50325DD3327E8F2DC2DCEF /* Pods_LearningBrailleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearningBrailleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E14EB0A2130FCD70098BA4D /* ListBLEViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBLEViewModel.swift; sourceTree = "<group>"; };
 		5E1B77C9212F845100F33170 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		5E1B77CF212F919E00F33170 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		5E1B77D5212F9AA600F33170 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				5E965CA820B3B5CD00FB6EE9 /* ListViewController.swift */,
+				5E14EB0A2130FCD70098BA4D /* ListBLEViewModel.swift */,
 			);
 			path = BLEConnection;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 				5E86156520B7D72700BE0B15 /* ReadTextController.swift in Sources */,
 				5EDFF62A20604FEC002FF36A /* Protocols.swift in Sources */,
 				5E835E6820BB582E00E2A9F8 /* ResponseCell.swift in Sources */,
+				5E14EB0B2130FCD70098BA4D /* ListBLEViewModel.swift in Sources */,
 				5E835E6420BA609400E2A9F8 /* BLEBridg.swift in Sources */,
 				5E4148DE2053754B001B1892 /* MainViewController.swift in Sources */,
 				5E9A440C20B36F0400E70E78 /* Cell.swift in Sources */,

@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 
 struct LoginViewModel {
     
@@ -25,6 +26,7 @@ struct LoginViewModel {
             emailTest.evaluate(with: $0)
         })
     }
+    
     
     func login(){
         //        self.loginViewModel.login()

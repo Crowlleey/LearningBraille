@@ -588,9 +588,6 @@
                                         <state key="normal" title="Sign In">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
-                                        <connections>
-                                            <action selector="btSignIn:" destination="jNz-iK-scr" eventType="touchUpInside" id="Ic6-hC-BrC"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igm-mu-Wdb">
                                         <rect key="frame" x="0.0" y="50" width="335" height="40"/>
@@ -601,9 +598,6 @@
                                         <state key="normal" title="Create New Account">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
-                                        <connections>
-                                            <action selector="btCreateAcc:" destination="jNz-iK-scr" eventType="touchUpInside" id="v3T-5I-xse"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -632,6 +626,7 @@
                     </view>
                     <connections>
                         <outlet property="btForgotPassword" destination="eOG-G2-lC7" id="JbC-Kl-Cxk"/>
+                        <outlet property="btSignIn" destination="s5r-ak-S90" id="5yg-NY-kuA"/>
                         <outlet property="tfEmail" destination="PkW-RJ-MRN" id="mp3-Sa-Qfx"/>
                         <outlet property="tfPassword" destination="uiR-4p-ocb" id="HPV-xd-9Rz"/>
                         <segue destination="nHa-TS-PhT" kind="unwind" identifier="unwindToMain" unwindAction="unwindToMainWithSegue:" id="I7R-jg-AKa"/>

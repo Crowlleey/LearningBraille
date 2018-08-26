@@ -10,16 +10,12 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-struct LoginViewModel {
+class LoginViewModel {
     
+    private let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
     let email = Variable<String>("Start With Value 2")
     let password = Variable<String>("")
-    private let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-    
-//    func login(){
-//        print(email.value, " email + senha ", password.value)
-//    }
-    
+
     var isValidEmail: Observable<Bool> {
         let emailTest = NSPredicate(format:"SELF MATCHES %@", regex)
         return email.asObservable().map({
@@ -27,27 +23,27 @@ struct LoginViewModel {
         })
     }
     
+    let signInDidTapSubject = PublishSubject<Void>()
+    let loginActionResult: Driver<AutheticationStatus>
     
-    func login(){
-        //        self.loginViewModel.login()
-        //        auth.login(with: self.tfEmail.text!, self.tfPassword.text!) { (res, err) in
-        //            if (err == nil) {
-        //                self.createAllert(with: .sucess, message: "Welcome", action: {
-        //                    let user: User = CoreDataManager.managerInstance().Object()
-        //                    user.name = res?.user.email
-        //                    user.email = res?.user.email
-        //                    user.token = res?.user.uid
-        //                    CoreDataManager.managerInstance().saveThis(user, completionHandler: { (err) in
-        //                        print(err ?? "Nao tem err")
-        //                    })
-        //                    self.performSegue(withIdentifier: "unwindToMain", sender: nil)
-        //                })
-        //            }else{
-        //                let message = err.debugDescription.translateFBError()
-        //                self.createAllert(with: .fail, message: message!, action: nil)
-        //            }
-        //        }
+    private let disposeBag = DisposeBag()
+    
+    init() {
+        
+        let usernameAndPassword = Observable.combineLatest(email.asObservable(), password.asObservable()) {
+            ($0, $1)
+        }
+
+        let userAndPassword = Observable.combineLatest(email.asObservable(), password.asObservable()){ ($0, $1) }
+        
+        self.loginActionResult = signInDidTapSubject.asObservable()
+            .withLatestFrom(userAndPassword)
+            .flatMap{ return Authentication().rxLogin(with: $0.0, $0.1) }
+            .asDriver(onErrorJustReturn: .error(.server))
+
     }
+    
+
 
     
 }

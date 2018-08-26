@@ -25,10 +25,7 @@ class LoginViewController: UIViewController{
     @IBOutlet weak var tfPassword: UITextField!
     
     @IBOutlet weak var btForgotPassword: UIButton!
-    
-    private let auth: Authentication = {
-       return Authentication()
-    }()
+    @IBOutlet weak var btSignIn: UIButton!
     
     var attempts: Int = 0 {
         didSet{
@@ -54,33 +51,50 @@ class LoginViewController: UIViewController{
         print(self.text)
     }
     
-    @IBAction func btSignIn(_ sender: Any) {
-        attempts = attempts + 1
-        
-    }
-    
-    var i: AuthDataResult!
     var errrr: Error!
 
     @IBAction func btCreateAcc(_ sender: Any) {
-        auth.createUser(with: self.tfEmail.text!, self.tfPassword.text!) { (res, err) in
-            if (err == nil) {
-                self.createAllert(with: .sucess, message: "User created successfully", action: {
-                    self.performSegue(withIdentifier: "unwindToMain", sender: nil)
-                })
-            }else{
-                let message = err.debugDescription.translateFBError()
-                self.createAllert(with: .fail, message: message!, action: {
-                    self.tfEmail.text = ""
-                    self.tfPassword.text = ""
-                })
-            }
-        }
+//        auth.createUser(with: self.tfEmail.text!, self.tfPassword.text!) { (res, err) in
+//            if (err == nil) {
+//                self.createAllert(with: .sucess, message: "User created successfully", action: {
+//                    self.performSegue(withIdentifier: "unwindToMain", sender: nil)
+//                })
+//            }else{
+//                let message = err.debugDescription.translateFBError()
+//                self.createAllert(with: .fail, message: message!, action: {
+//                    self.tfEmail.text = ""
+//                    self.tfPassword.text = ""
+//                })
+//            }
+//        }
     }
     
+    // Mark: - Setup bindings
+    
     func setupBindings(){
+        // setup tex field bildings
         _ = self.tfEmail.rx.text.map{ $0 ?? "" }.bind(to: self.loginViewModel.email)
         _ = self.tfPassword.rx.text.map{ $0 ?? "" }.bind(to: self.loginViewModel.password)
+
+        // setup button bindigns
+        self.btSignIn.rx.tap
+            .bind(to: self.loginViewModel.signInDidTapSubject)
+            .disposed(by: self.disposeBag);
+        
+        self.loginViewModel.loginActionResult.asObservable().subscribe{
+            
+        }.disposed(by: disposeBag)
+        
+        _ = self.loginViewModel.loginActionResult.asObservable().subscribe(onNext: { response in
+            switch response{
+            case .none:
+                print("none")
+            case .error(let err):
+                print(err)
+            case .success(let usr):
+                print(usr)
+            }
+        })
     }
     
     func createAllert(with type:AlertType,  message: String, action: (()-> Void)?) {

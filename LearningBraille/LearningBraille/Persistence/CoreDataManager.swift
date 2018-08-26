@@ -36,7 +36,6 @@ class CoreDataManager: CDManagerProtocol{
         
         do {
             try context.save()
-            
             completionHandler(nil)
         } catch let err {
             print("Fatal ERROR")

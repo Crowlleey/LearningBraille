@@ -9,6 +9,20 @@
 import Foundation
 import Firebase
 import FirebaseAuth
+import RxSwift
+import RxCocoa
+
+enum AutenticationError: Error {
+    case server
+    case badReponse(String)
+    case badCredentials
+}
+
+enum AutheticationStatus {
+    case none
+    case error(AutenticationError)
+    case success(User)
+}
 
 class Authentication{
     
@@ -28,9 +42,28 @@ class Authentication{
         Auth.auth().signIn(withEmail: email, password: password) { (res, err) in
             completion(res, err)
         }
-//
-//        Auth.auth().signIn(withEmail: "giorgines@gmail.com", password: "agoravai") { (res, err) in
-//            completion(res, err)
-//        }
+    }
+    
+    func rxLogin(with email: String,_ password: String) -> Observable<AutheticationStatus>  {
+       
+        return Observable<AutheticationStatus>.create{ observer in
+        
+            Auth.auth().signIn(withEmail: email, password: password) { (res, err) in
+                if err == nil {
+                    let usr: User = CoreDataManager.managerInstance().Object()
+                    usr.name = res?.user.email
+                    usr.email = res?.user.email
+                    usr.token = res?.user.uid
+                    
+                    observer.onNext(.success(usr))
+                    observer.onCompleted()
+                }else{
+
+                    observer.onNext(.error(.server))
+                    observer.onCompleted()
+                }
+            }
+            return Disposables.create()
+        }
     }
 }

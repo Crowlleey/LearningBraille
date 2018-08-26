@@ -25,7 +25,6 @@ class ListViewController: UIViewController{
     }
     
     @IBAction func btLoad(_ sender: Any) {
-     
 //        self.connector.send(value: "g")
     }
 }

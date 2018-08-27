@@ -73,7 +73,6 @@ class LoginViewController: UIViewController{
         
         _ = self.loginViewModel.loginActionResult.asObservable().subscribe(onNext: { [unowned self] response in
             switch response{
-            case .none: break
             case .error(let err):
                 print(err)
                 self.createAllert(with: .fail, message: "Falha ao logar", action: nil)
@@ -111,7 +110,6 @@ extension LoginViewController {
 
 extension String {
     func translateFBError() -> String! {
-        
         return (range(of: "\"")?.upperBound).flatMap { substringFrom in
             (range(of: "\"", range: substringFrom..<endIndex)?.lowerBound).map { substringTo in
                 String(self[substringFrom..<substringTo])

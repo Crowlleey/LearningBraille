@@ -43,7 +43,7 @@ class MainViewController: UIViewController{
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        _ = self.mainViewModel.isRegistered2.subscribe(onError: { (err) in
+        _ = self.mainViewModel.isRegistered.subscribe(onError: { (err) in
             self.performSegue(withIdentifier: "toLogin", sender: nil)
         })
     }

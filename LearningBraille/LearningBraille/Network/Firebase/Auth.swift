@@ -19,7 +19,6 @@ enum AutenticationError: Error {
 }
 
 enum AutheticationStatus {
-    case none
     case error(AutenticationError)
     case success(User)
 }

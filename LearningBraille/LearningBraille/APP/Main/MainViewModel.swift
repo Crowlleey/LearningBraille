@@ -12,7 +12,7 @@ import RxCocoa
 
 struct MainViewModel {
 
-    let isRegistered2: Observable<([User], Error?)>
+    let isRegistered: Observable<([User], Error?)>
 //    let isRegistered = Variable<([User], Error?)>(([], nil))
     
     init() {
@@ -20,10 +20,7 @@ struct MainViewModel {
 //        isRegistered2 = CoreDataManager.managerInstance().isRegistered()
 //            .map{$0}
 
-        isRegistered2 = CoreDataManager.managerInstance().isRegistered()
-            .map({ (r) in
-                print(r.0)
-                return r
-            })
+        isRegistered = CoreDataManager.managerInstance().isRegistered()
+     
     }
 }

@@ -8,6 +8,10 @@
 
 import CoreData
 import UIKit
+import RxSwift
+import RxCocoa
+
+public typealias closure = ((Error) -> (Void))?
 
 enum ManagedType: String {
     case user = "User"
@@ -20,7 +24,7 @@ enum RequestType: String{
 private let cDInstance = CoreDataManager()
 
 protocol CDManagerProtocol{
-    func saveThis<T: NSManagedObject>(_ obj: T, completionHandler: @escaping(Error?) -> Void)
+//    func saveThis<T: NSManagedObject>(_ obj: T, completionHandler: @escaping(Error?) -> Void)
 }
 
 class CoreDataManager: CDManagerProtocol{
@@ -28,18 +32,17 @@ class CoreDataManager: CDManagerProtocol{
     public class func managerInstance() -> CoreDataManager{
         return cDInstance
     }
-    
-    func saveThis<T: NSManagedObject>(_ obj: T, completionHandler: @escaping(Error?) -> Void){
+
+    func saveThis<T: NSManagedObject>(_ obj: T, completionHandler: ((Error?) -> Void)? = nil){
         
         let context = getContext()
         
-        
         do {
             try context.save()
-            completionHandler(nil)
+            if let completion = completionHandler{ completion(nil) }
         } catch let err {
             print("Fatal ERROR")
-            completionHandler(err)
+            if let completion = completionHandler{ completion(err) }
         }
     }
     
@@ -65,6 +68,29 @@ class CoreDataManager: CDManagerProtocol{
         } catch let err {
             print(err)
             completionHandler([],err)
+        }
+    }
+    
+    func isRegistered() -> Observable<([User], Error?)> {
+        let context = getContext()
+        
+        return Observable<([User], Error?)>.create{ observer in
+            
+            let fetchedRequest: NSFetchRequest<User> = User.fetchRequest()
+            fetchedRequest.returnsObjectsAsFaults = false
+            let sortDescriptor = NSSortDescriptor(key: "email", ascending: true)
+            fetchedRequest.sortDescriptors = [sortDescriptor]
+            
+            let fetchedResult: NSFetchedResultsController<User> = NSFetchedResultsController(fetchRequest: fetchedRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+            fetchedResult.delegate = UIViewController() as? NSFetchedResultsControllerDelegate
+            
+            do {
+                try fetchedResult.performFetch()
+                observer.onNext((fetchedResult.fetchedObjects ?? [], nil))
+            } catch let err{
+                observer.onError(err)
+            }
+            return Disposables.create()
         }
     }
     

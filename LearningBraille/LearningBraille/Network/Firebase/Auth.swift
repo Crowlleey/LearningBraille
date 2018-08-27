@@ -54,7 +54,7 @@ class Authentication{
                     usr.name = res?.user.email
                     usr.email = res?.user.email
                     usr.token = res?.user.uid
-                    
+                    CoreDataManager.managerInstance().saveThis(usr)
                     observer.onNext(.success(usr))
                     observer.onCompleted()
                 }else{

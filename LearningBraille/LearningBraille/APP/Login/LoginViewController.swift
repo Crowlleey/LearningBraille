@@ -85,14 +85,17 @@ class LoginViewController: UIViewController{
             
         }.disposed(by: disposeBag)
         
-        _ = self.loginViewModel.loginActionResult.asObservable().subscribe(onNext: { response in
+        _ = self.loginViewModel.loginActionResult.asObservable().subscribe(onNext: { [unowned self] response in
             switch response{
-            case .none:
-                print("none")
+            case .none: break
             case .error(let err):
                 print(err)
+                self.createAllert(with: .fail, message: "Falha ao logar", action: nil)
             case .success(let usr):
                 print(usr)
+                self.createAllert(with: .sucess, message: "Logado com sucesso", action: {
+                    self.performSegue(withIdentifier: "unwindToMain", sender: nil)
+                })
             }
         })
     }

@@ -13,6 +13,9 @@ class MainViewController: UIViewController{
 
     var stBraille: String!
     var firstTime = true
+    var registered = {
+       return CoreDataManager.managerInstance().isRegistered()
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()

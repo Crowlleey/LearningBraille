@@ -181,8 +181,8 @@
 		5E1B77CC212F901600F33170 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				5E4148DD2053754B001B1892 /* MainViewController.swift */,
 				5E1B77D5212F9AA600F33170 /* MainViewModel.swift */,
+				5E4148DD2053754B001B1892 /* MainViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";

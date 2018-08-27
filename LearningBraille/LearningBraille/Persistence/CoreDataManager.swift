@@ -86,7 +86,16 @@ class CoreDataManager: CDManagerProtocol{
             
             do {
                 try fetchedResult.performFetch()
-                observer.onNext((fetchedResult.fetchedObjects ?? [], nil))
+                let toReturn = fetchedResult.fetchedObjects
+                
+                if toReturn?.count == 0{
+                    let erro = CoreDataError(title: "nil user", description: "have no user in database", code: 666)
+                    observer.onError(erro)
+                }else{
+                    observer.onNext((toReturn!, nil))
+                    observer.onCompleted()
+                }
+    
             } catch let err{
                 observer.onError(err)
             }
@@ -104,4 +113,25 @@ class CoreDataManager: CDManagerProtocol{
     }
 }
 
+protocol CDError: LocalizedError {
+    
+    var title: String? { get }
+    var code: Int { get }
+}
+
+struct CoreDataError: CDError {
+    
+    var title: String?
+    var code: Int
+    var errorDescription: String? { return _description }
+    var failureReason: String? { return _description }
+    
+    private var _description: String
+    
+    init(title: String?, description: String, code: Int) {
+        self.title = title ?? "Error"
+        self._description = description
+        self.code = code
+    }
+}
 

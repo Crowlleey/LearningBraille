@@ -13,13 +13,8 @@ import RxCocoa
 struct MainViewModel {
 
     let isRegistered: Observable<([User], Error?)>
-//    let isRegistered = Variable<([User], Error?)>(([], nil))
     
     init() {
-//
-//        isRegistered2 = CoreDataManager.managerInstance().isRegistered()
-//            .map{$0}
-
         isRegistered = CoreDataManager.managerInstance().isRegistered()
      
     }

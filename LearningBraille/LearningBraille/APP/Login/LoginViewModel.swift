@@ -30,20 +30,11 @@ class LoginViewModel {
     
     init() {
         
-        let usernameAndPassword = Observable.combineLatest(email.asObservable(), password.asObservable()) {
-            ($0, $1)
-        }
-
         let userAndPassword = Observable.combineLatest(email.asObservable(), password.asObservable()){ ($0, $1) }
         
         self.loginActionResult = signInDidTapSubject.asObservable()
             .withLatestFrom(userAndPassword)
             .flatMap{ return Authentication().rxLogin(with: $0.0, $0.1) }
             .asDriver(onErrorJustReturn: .error(.server))
-
     }
-    
-
-
-    
 }

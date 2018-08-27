@@ -48,19 +48,16 @@ class LoginViewController: UIViewController{
     // Mark: - Setup bindings
     
     func setupBindings(){
-        // setup tex field bildings
+        // setup tex field bildings (send to login view-model when tfEmail and tfPassword change text)
         _ = self.tfEmail.rx.text.map{ $0 ?? "" }.bind(to: self.loginViewModel.email)
         _ = self.tfPassword.rx.text.map{ $0 ?? "" }.bind(to: self.loginViewModel.password)
 
-        // setup button bindigns
+        // setup button bindig (send to login view-model when btSignIn is pressed)
         self.btSignIn.rx.tap
             .bind(to: self.loginViewModel.signInDidTapSubject)
             .disposed(by: self.disposeBag);
         
-        self.loginViewModel.loginActionResult.asObservable().subscribe{
-            
-        }.disposed(by: disposeBag)
-        
+        // observing the result of the call when the button is pressed
         _ = self.loginViewModel.loginActionResult.asObservable().subscribe(onNext: { [unowned self] response in
             switch response{
             case .error(let err):

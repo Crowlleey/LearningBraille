@@ -7,36 +7,45 @@
 //
 
 import UIKit
-import CoreBluetooth
+import RxSwift
+import RxCocoa
 
 class MainViewController: UIViewController{
 
-    var stBraille: String!
-    var firstTime = true
+    let mainViewModel = MainViewModel()
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        stBraille = "?a"
-     
-        let sttt = stBraille.convertToBraille()
-        
-//        for words in sttt.words{
-//            if(words == [false,false,false,false,false,false,]){
-//                print("")
-//                print("")
-//            }else{
-//                print(words)
+//        self.mainViewModel.isRegistered.asObservable().subscribe{
+//            let a = $0.element
+//            let merda = a?.0
+//
+//            if let m = merda{
+//                for i in m{
+//                    print(i.name)
+//                }
 //            }
-//        }
+//
+//            print("sera? ", merda?.count)
+//        }.disposed(by: disposeBag)
         
+        
+       
+        
+    
+//            self.loginViewModel.loginActionResult.asObservable().subscribe{
+//
+//                }.disposed(by: disposeBag)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if self.firstTime{
-            performSegue(withIdentifier: "toLogin", sender: nil)
-        }
+        
+        _ = self.mainViewModel.isRegistered2.subscribe(onError: { (err) in
+            self.performSegue(withIdentifier: "toLogin", sender: nil)
+        })
     }
     
     @IBAction func exercise(_ sender: Any) {

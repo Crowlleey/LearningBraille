@@ -50,23 +50,9 @@ class LoginViewController: UIViewController{
     @IBAction func btForgotPassword(_ sender: Any) {
         print(self.text)
     }
-    
-    var errrr: Error!
 
     @IBAction func btCreateAcc(_ sender: Any) {
-//        auth.createUser(with: self.tfEmail.text!, self.tfPassword.text!) { (res, err) in
-//            if (err == nil) {
-//                self.createAllert(with: .sucess, message: "User created successfully", action: {
-//                    self.performSegue(withIdentifier: "unwindToMain", sender: nil)
-//                })
-//            }else{
-//                let message = err.debugDescription.translateFBError()
-//                self.createAllert(with: .fail, message: message!, action: {
-//                    self.tfEmail.text = ""
-//                    self.tfPassword.text = ""
-//                })
-//            }
-//        }
+
     }
     
     // Mark: - Setup bindings
@@ -85,14 +71,17 @@ class LoginViewController: UIViewController{
             
         }.disposed(by: disposeBag)
         
-        _ = self.loginViewModel.loginActionResult.asObservable().subscribe(onNext: { response in
+        _ = self.loginViewModel.loginActionResult.asObservable().subscribe(onNext: { [unowned self] response in
             switch response{
-            case .none:
-                print("none")
+            case .none: break
             case .error(let err):
                 print(err)
+                self.createAllert(with: .fail, message: "Falha ao logar", action: nil)
             case .success(let usr):
                 print(usr)
+                self.createAllert(with: .sucess, message: "Logado com sucesso", action: {
+                    self.performSegue(withIdentifier: "unwindToMain", sender: nil)
+                })
             }
         })
     }

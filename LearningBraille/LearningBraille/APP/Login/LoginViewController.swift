@@ -27,16 +27,6 @@ class LoginViewController: UIViewController{
     @IBOutlet weak var btForgotPassword: UIButton!
     @IBOutlet weak var btSignIn: UIButton!
     
-    var attempts: Int = 0 {
-        didSet{
-            if attempts >= 3{
-                self.btForgotPassword.setTitle("forgot your password?", for: .normal)
-            }
-        }
-    }
-    
-    var text: String!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loginViewModel = LoginViewModel()
@@ -48,7 +38,7 @@ class LoginViewController: UIViewController{
     }
     
     @IBAction func btForgotPassword(_ sender: Any) {
-        print(self.text)
+
     }
 
     @IBAction func btCreateAcc(_ sender: Any) {

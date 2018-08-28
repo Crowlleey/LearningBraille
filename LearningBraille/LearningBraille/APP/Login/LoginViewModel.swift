@@ -15,19 +15,17 @@ class LoginViewModel {
     private let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
     let email = Variable<String>("Start With Value 2")
     let password = Variable<String>("")
-
+    let signInDidTapSubject = PublishSubject<Void>()
+    let loginActionResult: Driver<AutheticationStatus>
+    private let disposeBag = DisposeBag()
+    
     var isValidEmail: Observable<Bool> {
         let emailTest = NSPredicate(format:"SELF MATCHES %@", regex)
         return email.asObservable().map({
             emailTest.evaluate(with: $0)
         })
     }
-    
-    let signInDidTapSubject = PublishSubject<Void>()
-    let loginActionResult: Driver<AutheticationStatus>
-    
-    private let disposeBag = DisposeBag()
-    
+
     init() {
         
         let userAndPassword = Observable.combineLatest(email.asObservable(), password.asObservable()){ ($0, $1) }

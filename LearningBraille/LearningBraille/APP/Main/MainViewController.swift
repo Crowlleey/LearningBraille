@@ -18,26 +18,6 @@ class MainViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.mainViewModel.isRegistered.asObservable().subscribe{
-//            let a = $0.element
-//            let merda = a?.0
-//
-//            if let m = merda{
-//                for i in m{
-//                    print(i.name)
-//                }
-//            }
-//
-//            print("sera? ", merda?.count)
-//        }.disposed(by: disposeBag)
-        
-        
-       
-        
-    
-//            self.loginViewModel.loginActionResult.asObservable().subscribe{
-//
-//                }.disposed(by: disposeBag)
     }
     
     override func viewDidAppear(_ animated: Bool) {

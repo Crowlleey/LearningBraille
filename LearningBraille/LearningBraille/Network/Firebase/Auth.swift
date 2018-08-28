@@ -20,7 +20,7 @@ enum AutenticationError: Error {
 
 enum AutheticationStatus {
     case error(AutenticationError)
-    case success(User)
+    case success(AuthDataResult)
 }
 
 class Authentication{
@@ -49,15 +49,9 @@ class Authentication{
         
             Auth.auth().signIn(withEmail: email, password: password) { (res, err) in
                 if err == nil {
-                    let usr: User = CoreDataManager.managerInstance().Object()
-                    usr.name = res?.user.email
-                    usr.email = res?.user.email
-                    usr.token = res?.user.uid
-                    CoreDataManager.managerInstance().saveThis(usr)
-                    observer.onNext(.success(usr))
+                    observer.onNext(.success(res!))
                     observer.onCompleted()
                 }else{
-
                     observer.onNext(.error(.server))
                     observer.onCompleted()
                 }

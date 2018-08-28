@@ -14,6 +14,7 @@
 		5E1B77D0212F919E00F33170 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1B77CF212F919E00F33170 /* LoginViewModel.swift */; };
 		5E1B77D6212F9AA600F33170 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1B77D5212F9AA600F33170 /* MainViewModel.swift */; };
 		5E1B77D8212FAFCE00F33170 /* BindingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1B77D7212FAFCE00F33170 /* BindingTextField.swift */; };
+		5E240FBE21349D9800190053 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E240FBD21349D9800190053 /* User.swift */; };
 		5E4148DC2053754B001B1892 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4148DB2053754B001B1892 /* AppDelegate.swift */; };
 		5E4148DE2053754B001B1892 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4148DD2053754B001B1892 /* MainViewController.swift */; };
 		5E4148E12053754B001B1892 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E4148DF2053754B001B1892 /* Main.storyboard */; };
@@ -73,6 +74,7 @@
 		5E1B77CF212F919E00F33170 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		5E1B77D5212F9AA600F33170 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		5E1B77D7212FAFCE00F33170 /* BindingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingTextField.swift; sourceTree = "<group>"; };
+		5E240FBD21349D9800190053 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5E4148D82053754B001B1892 /* LearningBraille.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningBraille.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E4148DB2053754B001B1892 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E4148DD2053754B001B1892 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 				5E835E6B20BB864C00E2A9F8 /* FeedbackView.swift */,
 				5EA1DCD02086972B00A31BE3 /* LettersJson */,
 				5EDC50C02078303E007AE8AB /* Text */,
+				5E240FBD21349D9800190053 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -618,6 +621,7 @@
 				5E4148E42053754B001B1892 /* LearningBraille.xcdatamodeld in Sources */,
 				5E9A440920B3670600E70E78 /* BLEConnector.swift in Sources */,
 				5E835E6A20BB589800E2A9F8 /* ResponseDelegate.swift in Sources */,
+				5E240FBE21349D9800190053 /* User.swift in Sources */,
 				5E835E6C20BB864C00E2A9F8 /* FeedbackView.swift in Sources */,
 				5EEDBF01212B61B90037F7C2 /* Auth.swift in Sources */,
 				5E965CA920B3B5CD00FB6EE9 /* ListViewController.swift in Sources */,

@@ -572,9 +572,6 @@
                                 <state key="normal" title="forgot your password?">
                                     <color key="titleColor" red="1" green="0.25160612854034348" blue="0.14296543134011586" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <connections>
-                                    <action selector="btForgotPassword:" destination="jNz-iK-scr" eventType="touchUpInside" id="lk8-LF-3Vx"/>
-                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VPJ-Ib-u1w">
                                 <rect key="frame" x="20" y="423.66666666666669" width="335" height="90.000000000000057"/>
@@ -625,7 +622,7 @@
                         <viewLayoutGuide key="safeArea" id="5un-r6-JWg"/>
                     </view>
                     <connections>
-                        <outlet property="btForgotPassword" destination="eOG-G2-lC7" id="JbC-Kl-Cxk"/>
+                        <outlet property="btForgotPassword" destination="eOG-G2-lC7" id="jzv-Rn-N7F"/>
                         <outlet property="btSignIn" destination="s5r-ak-S90" id="5yg-NY-kuA"/>
                         <outlet property="tfEmail" destination="PkW-RJ-MRN" id="mp3-Sa-Qfx"/>
                         <outlet property="tfPassword" destination="uiR-4p-ocb" id="HPV-xd-9Rz"/>

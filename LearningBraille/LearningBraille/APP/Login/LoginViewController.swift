@@ -37,14 +37,6 @@ class LoginViewController: UIViewController{
         setupBindings()
     }
     
-    @IBAction func btForgotPassword(_ sender: Any) {
-
-    }
-
-    @IBAction func btCreateAcc(_ sender: Any) {
-
-    }
-    
     // Mark: - Setup bindings
     
     func setupBindings(){
@@ -60,11 +52,12 @@ class LoginViewController: UIViewController{
         // observing the result of the call when the button is pressed
         _ = self.loginViewModel.loginActionResult.asObservable().subscribe(onNext: { [unowned self] response in
             switch response{
-            case .error(let err):
-                print(err)
+            case .error(_):
                 self.createAllert(with: .fail, message: "Falha ao logar", action: nil)
-            case .success(let usr):
-                print(usr)
+            case .success(let dataResult):
+                let usr: User = CoreDataManager.managerInstance().Object()
+                usr.populate(with: dataResult)
+                CoreDataManager.managerInstance().saveThis(usr)
                 self.createAllert(with: .sucess, message: "Logado com sucesso", action: {
                     self.performSegue(withIdentifier: "unwindToMain", sender: nil)
                 })
@@ -86,7 +79,6 @@ class LoginViewController: UIViewController{
 extension LoginViewController {
     func hideKeyboard() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
-    
         view.addGestureRecognizer(tap)
     }
     

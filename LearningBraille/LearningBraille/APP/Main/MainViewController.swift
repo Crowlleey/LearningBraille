@@ -17,7 +17,6 @@ class MainViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -32,9 +31,7 @@ class MainViewController: UIViewController{
         performSegue(withIdentifier: "toGame", sender: nil)
     }
     
-    @IBAction func unwindToMain(segue:UIStoryboardSegue) {
-        
-    }
+    @IBAction func unwindToMain(segue:UIStoryboardSegue) { }
     
 }
 

@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import Firebase
+import Rswift
 
 enum AlertType: String{
     case sucess = "Sucess"
@@ -26,6 +27,7 @@ class LoginViewController: UIViewController{
     
     @IBOutlet weak var btForgotPassword: UIButton!
     @IBOutlet weak var btSignIn: UIButton!
+    @IBOutlet weak var btCreateAccount: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +37,10 @@ class LoginViewController: UIViewController{
         self.hideKeyboard()
         
         setupBindings()
+
+        self.btSignIn.setTitle(R.string.localizable.sign_IN() , for: .normal)
+        self.btCreateAccount.setTitle(R.string.localizable.create_NEW_USER(), for: .normal)
+        
     }
     
     // Mark: - Setup bindings

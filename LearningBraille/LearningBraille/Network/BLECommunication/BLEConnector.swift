@@ -154,7 +154,7 @@ extension BLEConnector: CBPeripheralDelegate{
     }
     func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
     
-        guard let characteristOfInterest = self.characterist, let data = characteristOfInterest.value else { return }
+        guard let characteristOfInterest = self.characterist, let _ = characteristOfInterest.value else { return }
         if( characteristic.uuid.uuidString == characteristOfInterest.uuid.uuidString ) {
             print(characteristOfInterest, "perig")
             // Allows the delegate to handle data exchange (write)

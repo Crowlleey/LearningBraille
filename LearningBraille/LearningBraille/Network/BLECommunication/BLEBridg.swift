@@ -16,8 +16,6 @@ class BLEBridg{
     
     func sendToBLE(word: StringBraille){
       
-        let chars = ["A","B","C","D","E","F","G","H","I","J"]
-
         var count = 0
         
         var message = ""

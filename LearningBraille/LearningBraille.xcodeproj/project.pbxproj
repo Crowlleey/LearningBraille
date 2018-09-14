@@ -43,6 +43,8 @@
 		5EA1DCCD208696D500A31BE3 /* Letters.json in Resources */ = {isa = PBXBuildFile; fileRef = 5EA1DCCC208696D500A31BE3 /* Letters.json */; };
 		5EA1DCCF2086972000A31BE3 /* ParseJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA1DCCE2086972000A31BE3 /* ParseJSON.swift */; };
 		5EA39EBC213044D90054F8BD /* Variable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA39EBB213044D90054F8BD /* Variable.swift */; };
+		5ED425B62149EF3100BA6291 /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED425B52149EF3100BA6291 /* PerfilViewController.swift */; };
+		5ED425B82149EF4600BA6291 /* PerfilViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED425B72149EF4600BA6291 /* PerfilViewModel.swift */; };
 		5EDFF62620604AF8002FF36A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDFF62520604AF8002FF36A /* String.swift */; };
 		5EDFF62A20604FEC002FF36A /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDFF62920604FEC002FF36A /* Protocols.swift */; };
 		5EDFF62C2060511E002FF36A /* StringBraille.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDFF62B2060511E002FF36A /* StringBraille.swift */; };
@@ -112,6 +114,8 @@
 		5EA1DCCC208696D500A31BE3 /* Letters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Letters.json; sourceTree = "<group>"; };
 		5EA1DCCE2086972000A31BE3 /* ParseJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseJSON.swift; sourceTree = "<group>"; };
 		5EA39EBB213044D90054F8BD /* Variable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variable.swift; sourceTree = "<group>"; };
+		5ED425B52149EF3100BA6291 /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
+		5ED425B72149EF4600BA6291 /* PerfilViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewModel.swift; sourceTree = "<group>"; };
 		5EDFF62520604AF8002FF36A /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		5EDFF62920604FEC002FF36A /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		5EDFF62B2060511E002FF36A /* StringBraille.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringBraille.swift; sourceTree = "<group>"; };
@@ -289,6 +293,8 @@
 		5E91831C2147E807009DDBF4 /* Perfil */ = {
 			isa = PBXGroup;
 			children = (
+				5ED425B52149EF3100BA6291 /* PerfilViewController.swift */,
+				5ED425B72149EF4600BA6291 /* PerfilViewModel.swift */,
 			);
 			path = Perfil;
 			sourceTree = "<group>";
@@ -656,6 +662,8 @@
 				5E1B77D8212FAFCE00F33170 /* BindingTextField.swift in Sources */,
 				5E86156520B7D72700BE0B15 /* ReadTextController.swift in Sources */,
 				5EDFF62A20604FEC002FF36A /* Protocols.swift in Sources */,
+				5ED425B82149EF4600BA6291 /* PerfilViewModel.swift in Sources */,
+				5ED425B62149EF3100BA6291 /* PerfilViewController.swift in Sources */,
 				5E835E6820BB582E00E2A9F8 /* ResponseCell.swift in Sources */,
 				5E14EB0B2130FCD70098BA4D /* ListBLEViewModel.swift in Sources */,
 				5E835E6420BA609400E2A9F8 /* BLEBridg.swift in Sources */,

@@ -622,6 +622,7 @@
                         <viewLayoutGuide key="safeArea" id="5un-r6-JWg"/>
                     </view>
                     <connections>
+                        <outlet property="btCreateAccount" destination="igm-mu-Wdb" id="Vdf-P2-hYP"/>
                         <outlet property="btForgotPassword" destination="eOG-G2-lC7" id="jzv-Rn-N7F"/>
                         <outlet property="btSignIn" destination="s5r-ak-S90" id="5yg-NY-kuA"/>
                         <outlet property="tfEmail" destination="PkW-RJ-MRN" id="mp3-Sa-Qfx"/>
@@ -738,6 +739,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="xrr-ys-e5c"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hJX-u5-yGh">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		10CF79F805B1FCEF07A9B834 /* Pods_LearningBrailleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D50325DD3327E8F2DC2DCEF /* Pods_LearningBrailleTests.framework */; };
 		1AE3F170FE9E1E40797DE436 /* Pods_LearningBraille.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E397CB1E7DA079118341924E /* Pods_LearningBraille.framework */; };
+		5E128AEF2149A36600A869D2 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E128AEE2149A36600A869D2 /* R.generated.swift */; };
+		5E128AFB2149A80100A869D2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E128AFD2149A80100A869D2 /* Localizable.strings */; };
+		5E128B012149AA6300A869D2 /* Project.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E128B002149AA6300A869D2 /* Project.strings */; };
 		5E14EB0B2130FCD70098BA4D /* ListBLEViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E14EB0A2130FCD70098BA4D /* ListBLEViewModel.swift */; };
 		5E1B77CA212F845100F33170 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1B77C9212F845100F33170 /* CoreDataManager.swift */; };
 		5E1B77D0212F919E00F33170 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1B77CF212F919E00F33170 /* LoginViewModel.swift */; };
@@ -71,6 +74,11 @@
 /* Begin PBXFileReference section */
 		141AFD60EE371CE6CA9DA33F /* Pods-LearningBraille.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningBraille.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearningBraille/Pods-LearningBraille.debug.xcconfig"; sourceTree = "<group>"; };
 		2D50325DD3327E8F2DC2DCEF /* Pods_LearningBrailleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearningBrailleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E128AEE2149A36600A869D2 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = LearningBraille/Strings/R.generated.swift; sourceTree = SOURCE_ROOT; };
+		5E128AFE2149A80700A869D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5E128AFF2149A83600A869D2 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		5E128B002149AA6300A869D2 /* Project.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Project.strings; sourceTree = "<group>"; };
+		5E128B022149ABD200A869D2 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5E14EB0A2130FCD70098BA4D /* ListBLEViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBLEViewModel.swift; sourceTree = "<group>"; };
 		5E1B77C9212F845100F33170 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		5E1B77CF212F919E00F33170 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -101,7 +109,6 @@
 		5E86156D20B8AC1300BE0B15 /* CorrectWordDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectWordDelegate.swift; sourceTree = "<group>"; };
 		5E86157120B8ADA300BE0B15 /* CorrectWordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectWordCell.swift; sourceTree = "<group>"; };
 		5E965CA820B3B5CD00FB6EE9 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		5E965CAB20B3B75F00FB6EE9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		5E9A440820B3670600E70E78 /* BLEConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEConnector.swift; sourceTree = "<group>"; };
 		5E9A440B20B36F0400E70E78 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		5EA1DCCC208696D500A31BE3 /* Letters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Letters.json; sourceTree = "<group>"; };
@@ -175,6 +182,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5E128AF02149A42500A869D2 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				5E128AEE2149A36600A869D2 /* R.generated.swift */,
+				5E128AFD2149A80100A869D2 /* Localizable.strings */,
+				5E128B002149AA6300A869D2 /* Project.strings */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
 		5E1B77CB212F8FF100F33170 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +250,7 @@
 		5E4148DA2053754B001B1892 /* LearningBraille */ = {
 			isa = PBXGroup;
 			children = (
+				5E128AF02149A42500A869D2 /* Strings */,
 				5EDC50BE2078300D007AE8AB /* Com */,
 				5EDC50BB20782FE4007AE8AB /* Model */,
 				5EEDBEFF212B61950037F7C2 /* Network */,
@@ -398,6 +416,7 @@
 				5E4148D52053754B001B1892 /* Frameworks */,
 				5E4148D62053754B001B1892 /* Resources */,
 				713961220090714758DFBF0F /* [CP] Embed Pods Frameworks */,
+				5E128AED2149A0FC00A869D2 /* Rswift */,
 			);
 			buildRules = (
 			);
@@ -479,6 +498,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
+				es,
 			);
 			mainGroup = 5E4148CF2053754B001B1892;
 			productRefGroup = 5E4148D92053754B001B1892 /* Products */;
@@ -502,6 +523,8 @@
 				5EEDBEFD212B5F9B0037F7C2 /* GoogleService-Info.plist in Resources */,
 				5E4148E92053754B001B1892 /* LaunchScreen.storyboard in Resources */,
 				5E4148E12053754B001B1892 /* Main.storyboard in Resources */,
+				5E128B012149AA6300A869D2 /* Project.strings in Resources */,
+				5E128AFB2149A80100A869D2 /* Localizable.strings in Resources */,
 				5EA1DCCD208696D500A31BE3 /* Letters.json in Resources */,
 				5E835E6220B8D73900E2A9F8 /* Numbers.json in Resources */,
 				5E835E6E20BC411D00E2A9F8 /* Assets.xcassets in Resources */,
@@ -562,6 +585,20 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5E128AED2149A0FC00A869D2 /* Rswift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Rswift;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"";
+		};
 		713961220090714758DFBF0F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -571,6 +608,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-LearningBraille/Pods-LearningBraille-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -580,6 +618,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -628,6 +667,7 @@
 				5E835E6820BB582E00E2A9F8 /* ResponseCell.swift in Sources */,
 				5E14EB0B2130FCD70098BA4D /* ListBLEViewModel.swift in Sources */,
 				5E835E6420BA609400E2A9F8 /* BLEBridg.swift in Sources */,
+				5E128AEF2149A36600A869D2 /* R.generated.swift in Sources */,
 				5E4148DE2053754B001B1892 /* MainViewController.swift in Sources */,
 				5E9A440C20B36F0400E70E78 /* Cell.swift in Sources */,
 				5E4148DC2053754B001B1892 /* AppDelegate.swift in Sources */,
@@ -678,11 +718,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		5E128AFD2149A80100A869D2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E128AFE2149A80700A869D2 /* Base */,
+				5E128AFF2149A83600A869D2 /* pt-BR */,
+				5E128B022149ABD200A869D2 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		5E4148DF2053754B001B1892 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				5E4148E02053754B001B1892 /* Base */,
-				5E965CAB20B3B75F00FB6EE9 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -702,6 +751,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -761,6 +811,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
